@@ -35,7 +35,7 @@
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<div class="collapse navbar-collapse navbar-painel" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
 					<li>
 						<a class="page-scroll scrollSuave" href="#about">Sobre</a>
@@ -55,7 +55,7 @@
 	<!-- /.container-fluid -->
 	</nav>
 	<div class="container-fluid">
-		<div class="row">
+		<div class="row painel-content">
 			<div id="divConteudo" class="container col-md-offset-1 col-md-10">
 				<h4 class="text-justify">Adicionar advertências</h4>
 				<div class="container-fluid">
