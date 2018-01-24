@@ -10,13 +10,13 @@
 
     <script src="https://use.fontawesome.com/330b781289.js"></script>
 
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/stylepcd.css">
-    <script src="assets/js/jquery-3.2.1.js"></script>
-    <script src="assets/js/javascript.js"></script>  
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <link rel="stylesheet" href="Assets/css/stylepcd.css">
+    <script src="Assets/js/jquery-3.2.1.js"></script>
+    <script src="Assets/js/javascript.js"></script>  
 
     <!-- Icon -->
-    <link rel="icon" href="assets/images/ecomp/logo.png">
+    <link rel="icon" href="Assets/images/ecomp/logo.png">
 
     <!-- Modal plugin -->
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>      
@@ -30,7 +30,7 @@
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="index.html">
-                    <img src="assets/images/ecomp/logo.png" width="30">
+                    <img src="Assets/images/ecomp/logo.png" width="30">
                 </a>
             </div>
 
@@ -68,7 +68,7 @@
                 <!-- Start Member -->
                 <div id="effect-1" class="col-lg-4 col-sm-6 effects clearfix">
                     <div class="img img-memberIcon img-circle img-responsive">
-                        <img class="memberIcon" src="assets/images/fotos/member-1.jpg" width=200 height=200 alt="" />
+                        <img class="memberIcon" src="Assets/images/fotos/member-1.jpg" width=200 height=200 alt="" />
                         <div class="overlay">
                             <a href="#window1" data-toggle="modal" class="expand pointsText">20 PONTOS</a>
                         </div>
@@ -79,7 +79,7 @@
                             <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <img class="img img-responsive img-companyLogo" src="assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
+                                <img class="img img-responsive img-companyLogo" src="Assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
                                 <h1 id="insideWidow" class="memberName text-right">
                                     <i class="fa fa-user-o" aria-hidden="true"></i> Alisson Vilas
                                     <div id="insideWidow" class="memberClassification text-right">
@@ -88,7 +88,7 @@
                                 </h1>        
                             </div>
                             <div class="modal-body">
-                                <img class="img-memberWindow img img-rounded img-responsive" src="assets/images/fotos/member-1.jpg" width="300" height="405" alt=""></img>
+                                <img class="img-memberWindow img img-rounded img-responsive" src="Assets/images/fotos/member-1.jpg" width="300" height="405" alt=""></img>
                                 <hr class="dark">
                                 <p class="text-center historicTitle">HISTÓRICO</p>
                                 <hr class="dark">
@@ -114,7 +114,7 @@
                 <!-- Start Member -->
                 <div id="effect-1" class="col-lg-4 col-sm-6 effects clearfix">
                     <div class="img img-memberIcon img-circle img-responsive">
-                        <img class="memberIcon" src="assets/images/fotos/member-2.jpg" width=200 height=200 alt="" />
+                        <img class="memberIcon" src="Assets/images/fotos/member-2.jpg" width=200 height=200 alt="" />
                         <div class="overlay">
                             <a href="#window2" data-toggle="modal" class="expand pointsText">20 PONTOS</a>
                         </div>
@@ -125,7 +125,7 @@
                             <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <img class="img img-responsive img-companyLogo" src="assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
+                                <img class="img img-responsive img-companyLogo" src="Assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
                                 <h1 id="insideWidow" class="memberName text-right">
                                     <i class="fa fa-user-o" aria-hidden="true"></i>Bernardo Rosa
                                     <div id="insideWidow" class="memberClassification text-right">
@@ -134,7 +134,7 @@
                                 </h1>        
                             </div>
                             <div class="modal-body">
-                                <img class="img-memberWindow img img-rounded img-responsive" src="assets/images/fotos/member-2.jpg" width="300" height="405" alt=""></img>
+                                <img class="img-memberWindow img img-rounded img-responsive" src="Assets/images/fotos/member-2.jpg" width="300" height="405" alt=""></img>
                                 <hr class="dark">
                                 <p class="text-center historicTitle">HISTÓRICO</p>
                                 <hr class="dark">
@@ -161,7 +161,7 @@
                 <!-- Start Member -->
                 <div id="effect-1" class="col-lg-4 col-sm-6 effects clearfix">
                     <div class="img img-memberIcon img-circle img-responsive">
-                        <img class="memberIcon" src="assets/images/fotos/member-3.jpg" width=200 height=200 alt="" />
+                        <img class="memberIcon" src="Assets/images/fotos/member-3.jpg" width=200 height=200 alt="" />
                         <div class="overlay">
                             <a href="#window3" data-toggle="modal" class="expand pointsText">20 PONTOS</a>
                         </div>
@@ -172,7 +172,7 @@
                             <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <img class="img img-responsive img-companyLogo" src="assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
+                                <img class="img img-responsive img-companyLogo" src="Assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
                                 <h1 id="insideWidow" class="memberName text-right">
                                     <i class="fa fa-user-o" aria-hidden="true"></i> Bruno Vogel
                                     <div id="insideWidow" class="memberClassification text-right">
@@ -181,7 +181,7 @@
                                 </h1>        
                             </div>
                             <div class="modal-body">
-                                <img class="img-memberWindow img img-rounded img-responsive" src="assets/images/fotos/member-3.jpg" width="300" height="405" alt=""></img>
+                                <img class="img-memberWindow img img-rounded img-responsive" src="Assets/images/fotos/member-3.jpg" width="300" height="405" alt=""></img>
                                 <hr class="dark">
                                 <p class="text-center historicTitle">HISTÓRICO</p>
                                 <hr class="dark">
@@ -207,7 +207,7 @@
                 <!-- Start Member -->
                 <div id="effect-1" class="col-lg-4 col-sm-6 effects clearfix">
                     <div class="img img-memberIcon img-circle img-responsive">
-                        <img class="memberIcon" src="assets/images/fotos/member-4.jpg" width=200 height=200 alt="" />
+                        <img class="memberIcon" src="Assets/images/fotos/member-4.jpg" width=200 height=200 alt="" />
                         <div class="overlay">
                             <a href="#window4" data-toggle="modal" class="expand pointsText">20 PONTOS</a>
                         </div>
@@ -218,7 +218,7 @@
                             <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <img class="img img-responsive img-companyLogo" src="assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
+                                <img class="img img-responsive img-companyLogo" src="Assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
                                 <h1 id="insideWidow" class="memberName text-right">
                                     <i class="fa fa-user-o" aria-hidden="true"></i> Cássio Santos
                                     <div id="insideWidow" class="memberClassification text-right">
@@ -227,7 +227,7 @@
                                 </h1>        
                             </div>
                             <div class="modal-body">
-                                <img class="img-memberWindow img img-rounded img-responsive" src="assets/images/fotos/member-4.jpg" width="300" height="405" alt=""></img>
+                                <img class="img-memberWindow img img-rounded img-responsive" src="Assets/images/fotos/member-4.jpg" width="300" height="405" alt=""></img>
                                 <hr class="dark">
                                 <p class="text-center historicTitle">HISTÓRICO</p>
                                 <hr class="dark">
@@ -253,7 +253,7 @@
                 <!-- Start Member -->
                 <div id="effect-1" class="col-lg-4 col-sm-6 effects clearfix">
                     <div class="img img-memberIcon img-circle img-responsive">
-                        <img class="memberIcon" src="assets/images/fotos/member-5.jpg" width=200 height=200 alt="" />
+                        <img class="memberIcon" src="Assets/images/fotos/member-5.jpg" width=200 height=200 alt="" />
                         <div class="overlay">
                             <a href="#window5" data-toggle="modal" class="expand pointsText">20 PONTOS</a>
                         </div>
@@ -264,7 +264,7 @@
                             <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <img class="img img-responsive img-companyLogo" src="assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
+                                <img class="img img-responsive img-companyLogo" src="Assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
                                 <h1 id="insideWidow" class="memberName text-right">
                                     <i class="fa fa-user-o" aria-hidden="true"></i> Fábio Barros
                                     <div id="insideWidow" class="memberClassification text-right">
@@ -273,7 +273,7 @@
                                 </h1>        
                             </div>
                             <div class="modal-body">
-                                <img class="img-memberWindow img img-rounded img-responsive" src="assets/images/fotos/member-5.jpg" width="300" height="405" alt=""></img>
+                                <img class="img-memberWindow img img-rounded img-responsive" src="Assets/images/fotos/member-5.jpg" width="300" height="405" alt=""></img>
                                 <hr class="dark">
                                 <p class="text-center historicTitle">HISTÓRICO</p>
                                 <hr class="dark">
@@ -299,7 +299,7 @@
                 <!-- Start Member -->
                 <div id="effect-1" class="col-lg-4 col-sm-6 effects clearfix">
                     <div class="img img-memberIcon img-circle img-responsive">
-                        <img class="memberIcon" src="assets/images/fotos/member-6.jpg" width=200 height=200 alt="" />
+                        <img class="memberIcon" src="Assets/images/fotos/member-6.jpg" width=200 height=200 alt="" />
                         <div class="overlay">
                             <a href="#window6" data-toggle="modal" class="expand pointsText">20 PONTOS</a>
                         </div>
@@ -310,7 +310,7 @@
                             <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <img class="img img-responsive img-companyLogo" src="assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
+                                <img class="img img-responsive img-companyLogo" src="Assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
                                 <h1 id="insideWidow" class="memberName text-right">
                                     <i class="fa fa-user-o" aria-hidden="true"></i> Gledson Oliveira
                                     <div id="insideWidow" class="memberClassification text-right">
@@ -319,7 +319,7 @@
                                 </h1>        
                             </div>
                             <div class="modal-body">
-                                <img class="img-memberWindow img img-rounded img-responsive" src="assets/images/fotos/member-6.jpg" width="300" height="405" alt=""></img>
+                                <img class="img-memberWindow img img-rounded img-responsive" src="Assets/images/fotos/member-6.jpg" width="300" height="405" alt=""></img>
                                 <hr class="dark">
                                 <p class="text-center historicTitle">HISTÓRICO</p>
                                 <hr class="dark">
@@ -359,7 +359,7 @@
                 <!-- Start Member -->
                 <div id="effect-1" class="col-lg-4 col-sm-6 effects clearfix">
                     <div class="img img-memberIcon img-circle img-responsive">
-                        <img class="memberIcon" src="assets/images/fotos/member-7.jpg" width=200 height=200 alt="" />
+                        <img class="memberIcon" src="Assets/images/fotos/member-7.jpg" width=200 height=200 alt="" />
                         <div class="overlay">
                             <a href="#window7" data-toggle="modal" class="expand pointsText">20 PONTOS</a>
                         </div>
@@ -370,7 +370,7 @@
                             <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <img class="img img-responsive img-companyLogo" src="assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
+                                <img class="img img-responsive img-companyLogo" src="Assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
                                 <h1 id="insideWidow" class="memberName text-right">
                                     <i class="fa fa-user-o" aria-hidden="true"></i> Kayo Costa
                                     <div id="insideWidow" class="memberClassification text-right">
@@ -379,7 +379,7 @@
                                 </h1>        
                             </div>
                             <div class="modal-body">
-                                <img class="img-memberWindow img img-rounded img-responsive" src="assets/images/fotos/member-7.jpg" width="300" height="405" alt=""></img>
+                                <img class="img-memberWindow img img-rounded img-responsive" src="Assets/images/fotos/member-7.jpg" width="300" height="405" alt=""></img>
                                 <hr class="dark">
                                 <p class="text-center historicTitle">HISTÓRICO</p>
                                 <hr class="dark">
@@ -405,7 +405,7 @@
                 <!-- Start Member -->
                 <div id="effect-1" class="col-lg-4 col-sm-6 effects clearfix">
                     <div class="img img-memberIcon img-circle img-responsive">
-                        <img class="memberIcon" src="assets/images/fotos/member-8.jpg" width=200 height=200 alt="" />
+                        <img class="memberIcon" src="Assets/images/fotos/member-8.jpg" width=200 height=200 alt="" />
                         <div class="overlay">
                             <a href="#window8" data-toggle="modal" class="expand pointsText">20 PONTOS</a>
                         </div>
@@ -416,7 +416,7 @@
                             <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <img class="img img-responsive img-companyLogo" src="assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
+                                <img class="img img-responsive img-companyLogo" src="Assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
                                 <h1 id="insideWidow" class="memberName text-right">
                                     <i class="fa fa-user-o" aria-hidden="true"></i> Luan Victor
                                     <div id="insideWidow" class="memberClassification text-right">
@@ -425,7 +425,7 @@
                                 </h1>        
                             </div>
                             <div class="modal-body">
-                                <img class="img-memberWindow img img-rounded img-responsive" src="assets/images/fotos/member-8.jpg" width="300" height="405" alt=""></img>
+                                <img class="img-memberWindow img img-rounded img-responsive" src="Assets/images/fotos/member-8.jpg" width="300" height="405" alt=""></img>
                                 <hr class="dark">
                                 <p class="text-center historicTitle">HISTÓRICO</p>
                                 <hr class="dark">
@@ -452,7 +452,7 @@
                 <!-- Start Member -->
                 <div id="effect-1" class="col-lg-4 col-sm-6 effects clearfix">
                     <div class="img img-memberIcon img-circle img-responsive">
-                        <img class="memberIcon" src="assets/images/fotos/member-9.jpg" width=200 height=200 alt="" />
+                        <img class="memberIcon" src="Assets/images/fotos/member-9.jpg" width=200 height=200 alt="" />
                         <div class="overlay">
                             <a href="#window9" data-toggle="modal" class="expand pointsText">20 PONTOS</a>
                         </div>
@@ -463,7 +463,7 @@
                             <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <img class="img img-responsive img-companyLogo" src="assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
+                                <img class="img img-responsive img-companyLogo" src="Assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
                                 <h1 id="insideWidow" class="memberName text-right">
                                     <i class="fa fa-user-o" aria-hidden="true"></i> Lucas Alves
                                     <div id="insideWidow" class="memberClassification text-right">
@@ -472,7 +472,7 @@
                                 </h1>        
                             </div>
                             <div class="modal-body">
-                                <img class="img-memberWindow img img-rounded img-responsive" src="assets/images/fotos/member-9.jpg" width="300" height="405" alt=""></img>
+                                <img class="img-memberWindow img img-rounded img-responsive" src="Assets/images/fotos/member-9.jpg" width="300" height="405" alt=""></img>
                                 <hr class="dark">
                                 <p class="text-center historicTitle">HISTÓRICO</p>
                                 <hr class="dark">
@@ -498,7 +498,7 @@
                 <!-- Start Member -->
                 <div id="effect-1" class="col-lg-4 col-sm-6 effects clearfix">
                     <div class="img img-memberIcon img-circle img-responsive">
-                        <img class="memberIcon" src="assets/images/fotos/member-10.jpg" width=200 height=200 alt="" />
+                        <img class="memberIcon" src="Assets/images/fotos/member-10.jpg" width=200 height=200 alt="" />
                         <div class="overlay">
                             <a href="#window10" data-toggle="modal" class="expand pointsText">20 PONTOS</a>
                         </div>
@@ -509,7 +509,7 @@
                             <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <img class="img img-responsive img-companyLogo" src="assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
+                                <img class="img img-responsive img-companyLogo" src="Assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
                                 <h1 id="insideWidow" class="memberName text-right">
                                     <i class="fa fa-user-o" aria-hidden="true"></i> Lucas Cardoso
                                     <div id="insideWidow" class="memberClassification text-right">
@@ -518,7 +518,7 @@
                                 </h1>        
                             </div>
                             <div class="modal-body">
-                                <img class="img-memberWindow img img-rounded img-responsive" src="assets/images/fotos/member-10.jpg" width="300" height="405" alt=""></img>
+                                <img class="img-memberWindow img img-rounded img-responsive" src="Assets/images/fotos/member-10.jpg" width="300" height="405" alt=""></img>
                                 <hr class="dark">
                                 <p class="text-center historicTitle">HISTÓRICO</p>
                                 <hr class="dark">
@@ -544,7 +544,7 @@
                 <!-- Start Member -->
                 <div id="effect-1" class="col-lg-4 col-sm-6 effects clearfix">
                     <div class="img img-memberIcon img-circle img-responsive">
-                        <img class="memberIcon" src="assets/images/fotos/member-11.jpg" width=200 height=200 alt="" />
+                        <img class="memberIcon" src="Assets/images/fotos/member-11.jpg" width=200 height=200 alt="" />
                         <div class="overlay">
                             <a href="#window11" data-toggle="modal" class="expand pointsText">20 PONTOS</a>
                         </div>
@@ -555,7 +555,7 @@
                             <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <img class="img img-responsive img-companyLogo" src="assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
+                                <img class="img img-responsive img-companyLogo" src="Assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
                                 <h1 id="insideWidow" class="memberName text-right">
                                     <i class="fa fa-user-o" aria-hidden="true"></i> Maria Luísa
                                     <div id="insideWidow" class="memberClassification text-right">
@@ -564,7 +564,7 @@
                                 </h1>        
                             </div>
                             <div class="modal-body">
-                                <img class="img-memberWindow img img-rounded img-responsive" src="assets/images/fotos/member-11.jpg" width="300" height="405" alt=""></img>
+                                <img class="img-memberWindow img img-rounded img-responsive" src="Assets/images/fotos/member-11.jpg" width="300" height="405" alt=""></img>
                                 <hr class="dark">
                                 <p class="text-center historicTitle">HISTÓRICO</p>
                                 <hr class="dark">
@@ -590,7 +590,7 @@
                 <!-- Start Member -->
                 <div id="effect-1" class="col-lg-4 col-sm-6 effects clearfix">
                     <div class="img img-memberIcon img-circle img-responsive">
-                        <img class="memberIcon" src="assets/images/fotos/member-12.jpg" width=200 height=200 alt="" />
+                        <img class="memberIcon" src="Assets/images/fotos/member-12.jpg" width=200 height=200 alt="" />
                         <div class="overlay">
                             <a href="#window12" data-toggle="modal" class="expand pointsText">20 PONTOS</a>
                         </div>
@@ -601,7 +601,7 @@
                             <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <img class="img img-responsive img-companyLogo" src="assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
+                                <img class="img img-responsive img-companyLogo" src="Assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
                                 <h1 id="insideWidow" class="memberName text-right">
                                     <i class="fa fa-user-o" aria-hidden="true"></i> Nilson Augusto
                                     <div id="insideWidow" class="memberClassification text-right">
@@ -610,7 +610,7 @@
                                 </h1>        
                             </div>
                             <div class="modal-body">
-                                <img class="img-memberWindow img img-rounded img-responsive" src="assets/images/fotos/member-12.jpg" width="300" height="405" alt=""></img>
+                                <img class="img-memberWindow img img-rounded img-responsive" src="Assets/images/fotos/member-12.jpg" width="300" height="405" alt=""></img>
                                 <hr class="dark">
                                 <p class="text-center historicTitle">HISTÓRICO</p>
                                 <hr class="dark">
@@ -648,7 +648,7 @@
                 <!-- Start Member -->
                 <div id="effect-1" class="col-lg-4 col-sm-6 effects clearfix">
                     <div class="img img-memberIcon img-circle img-responsive">
-                        <img class="memberIcon" src="assets/images/fotos/member-13.jpg" width=200 height=200 alt="" />
+                        <img class="memberIcon" src="Assets/images/fotos/member-13.jpg" width=200 height=200 alt="" />
                         <div class="overlay">
                             <a href="#window13" data-toggle="modal" class="expand pointsText">20 PONTOS</a>
                         </div>
@@ -659,7 +659,7 @@
                             <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <img class="img img-responsive img-companyLogo" src="assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
+                                <img class="img img-responsive img-companyLogo" src="Assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
                                 <h1 id="insideWidow" class="memberName text-right">
                                     <i class="fa fa-user-o" aria-hidden="true"></i> Odivio Caio
                                     <div id="insideWidow" class="memberClassification text-right">
@@ -668,7 +668,7 @@
                                 </h1>        
                             </div>
                             <div class="modal-body">
-                                <img class="img-memberWindow img img-rounded img-responsive" src="assets/images/fotos/member-13.jpg" width="300" height="405" alt=""></img>
+                                <img class="img-memberWindow img img-rounded img-responsive" src="Assets/images/fotos/member-13.jpg" width="300" height="405" alt=""></img>
                                 <hr class="dark">
                                 <p class="text-center historicTitle">HISTÓRICO</p>
                                 <hr class="dark">
@@ -694,7 +694,7 @@
                 <!-- Start Member -->
                 <div id="effect-1" class="col-lg-4 col-sm-6 effects clearfix">
                     <div class="img img-memberIcon img-circle img-responsive">
-                        <img class="memberIcon" src="assets/images/fotos/member-14.jpg" width=200 height=200 alt="" />
+                        <img class="memberIcon" src="Assets/images/fotos/member-14.jpg" width=200 height=200 alt="" />
                         <div class="overlay">
                             <a href="#window14" data-toggle="modal" class="expand pointsText">20 PONTOS</a>
                         </div>
@@ -705,7 +705,7 @@
                             <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <img class="img img-responsive img-companyLogo" src="assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
+                                <img class="img img-responsive img-companyLogo" src="Assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
                                 <h1 id="insideWidow" class="memberName text-right">
                                     <i class="fa fa-user-o" aria-hidden="true"></i> Pedro Brandão
                                     <div id="insideWidow" class="memberClassification text-right">
@@ -714,7 +714,7 @@
                                 </h1>        
                             </div>
                             <div class="modal-body">
-                                <img class="img-memberWindow img img-rounded img-responsive" src="assets/images/fotos/member-14.jpg" width="300" height="405" alt=""></img>
+                                <img class="img-memberWindow img img-rounded img-responsive" src="Assets/images/fotos/member-14.jpg" width="300" height="405" alt=""></img>
                                 <hr class="dark">
                                 <p class="text-center historicTitle">HISTÓRICO</p>
                                 <hr class="dark">
@@ -741,7 +741,7 @@
                 <!-- Start Member -->
                 <div id="effect-1" class="col-lg-4 col-sm-6 effects clearfix">
                     <div class="img img-memberIcon img-circle img-responsive">
-                        <img class="memberIcon" src="assets/images/fotos/member-15.jpg" width=200 height=200 alt="" />
+                        <img class="memberIcon" src="Assets/images/fotos/member-15.jpg" width=200 height=200 alt="" />
                         <div class="overlay">
                             <a href="#window15" data-toggle="modal" class="expand pointsText">20 PONTOS</a>
                         </div>
@@ -752,7 +752,7 @@
                             <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <img class="img img-responsive img-companyLogo" src="assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
+                                <img class="img img-responsive img-companyLogo" src="Assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
                                 <h1 id="insideWidow" class="memberName text-right">
                                     <i class="fa fa-user-o" aria-hidden="true"></i> Pedro Neri
                                     <div id="insideWidow" class="memberClassification text-right">
@@ -761,7 +761,7 @@
                                 </h1>        
                             </div>
                             <div class="modal-body">
-                                <img class="img-memberWindow img img-rounded img-responsive" src="assets/images/fotos/member-15.jpg" width="300" height="405" alt=""></img>
+                                <img class="img-memberWindow img img-rounded img-responsive" src="Assets/images/fotos/member-15.jpg" width="300" height="405" alt=""></img>
                                 <hr class="dark">
                                 <p class="text-center historicTitle">HISTÓRICO</p>
                                 <hr class="dark">
@@ -787,7 +787,7 @@
                 <!-- Start Member -->
                 <div id="effect-1" class="col-lg-4 col-sm-6 effects clearfix">
                     <div class="img img-memberIcon img-circle img-responsive">
-                        <img class="memberIcon" src="assets/images/fotos/member-16.jpg" width=200 height=200 alt="" />
+                        <img class="memberIcon" src="Assets/images/fotos/member-16.jpg" width=200 height=200 alt="" />
                         <div class="overlay">
                             <a href="#window16" data-toggle="modal" class="expand pointsText">20 PONTOS</a>
                         </div>
@@ -798,7 +798,7 @@
                             <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <img class="img img-responsive img-companyLogo" src="assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
+                                <img class="img img-responsive img-companyLogo" src="Assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
                                 <h1 id="insideWidow" class="memberName text-right">
                                     <i class="fa fa-user-o" aria-hidden="true"></i> Saulo de Tarso
                                     <div id="insideWidow" class="memberClassification text-right">
@@ -807,7 +807,7 @@
                                 </h1>        
                             </div>
                             <div class="modal-body">
-                                <img class="img-memberWindow img img-rounded img-responsive" src="assets/images/fotos/member-16.jpg" width="300" height="405" alt=""></img>
+                                <img class="img-memberWindow img img-rounded img-responsive" src="Assets/images/fotos/member-16.jpg" width="300" height="405" alt=""></img>
                                 <hr class="dark">
                                 <p class="text-center historicTitle">HISTÓRICO</p>
                                 <hr class="dark">
@@ -833,7 +833,7 @@
                 <!-- Start Member -->
                 <div id="effect-1" class="col-lg-4 col-sm-6 effects clearfix">
                     <div class="img img-memberIcon img-circle img-responsive">
-                        <img class="memberIcon" src="assets/images/fotos/member-17.jpg" width=200 height=200 alt="" />
+                        <img class="memberIcon" src="Assets/images/fotos/member-17.jpg" width=200 height=200 alt="" />
                         <div class="overlay">
                             <a href="#window17" data-toggle="modal" class="expand pointsText">20 PONTOS</a>
                         </div>
@@ -844,7 +844,7 @@
                             <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <img class="img img-responsive img-companyLogo" src="assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
+                                <img class="img img-responsive img-companyLogo" src="Assets/images/ecomp/logoNome.png" width="200" height="50"></img>                                                                                                    
                                 <h1 id="insideWidow" class="memberName text-right">
                                     <i class="fa fa-user-o" aria-hidden="true"></i> Thatianne Cristina
                                     <div id="insideWidow" class="memberClassification text-right">
@@ -853,7 +853,7 @@
                                 </h1>        
                             </div>
                             <div class="modal-body">
-                                <img class="img-memberWindow img img-rounded img-responsive" src="assets/images/fotos/member-17.jpg" width="300" height="405" alt=""></img>
+                                <img class="img-memberWindow img img-rounded img-responsive" src="Assets/images/fotos/member-17.jpg" width="300" height="405" alt=""></img>
                                 <hr class="dark">
                                 <p class="text-center historicTitle">HISTÓRICO</p>
                                 <hr class="dark">
