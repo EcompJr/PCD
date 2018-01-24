@@ -60,7 +60,7 @@
                     
                     <div class="form-group">
                         <label for="email">Login de Usuário</label>
-                        <input style="width:300px;" type="email" class="form-control" id="idEmail" name = "nameEmail" placeholder="Enter email">
+                        <input style="width:300px;" type="text" class="form-control" id="idEmail" name = "nameEmail" placeholder="Enter email">
                     </div>
                     
                     <div class="form-group">
