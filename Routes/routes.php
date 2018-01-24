@@ -10,7 +10,7 @@ if(isset($_POST['loginAttempt'])){
     $login = $_POST['login'];
     $password = sha1($_POST['password']);
                                                                        //unset($_POST['loginAttempt']);
-    $member = new Member($login, $password);
+    $member = new Membro($login, $password, null, null, null, null, null, null, null);
     
     var_dump($member);
     

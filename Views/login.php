@@ -56,7 +56,7 @@
             <div class="header-content-inner">
                 <h1 id="message"></h1>
                 <hr>
-                <form action = "../Routes/routes.php" method = "POST">
+                <form action = "../Routes/routes.php" method = "POST" id = "loginform">
                     
                     <div class="form-group">
                         <label for="login">Login de Usuário</label>
@@ -68,7 +68,7 @@
                         <input style="width:300px;" type="password" class="form-control" id="password" name = "password" placeholder="Password">
                     </div>
                     
-                    <button type="submit" class="btn btn-primary" name="loginAttempt" >Entrar</button>
+                    <button type="submit" class="btn btn-primary" name="loginAttempt" id="loginAttempt" >Entrar</button>
                 
                 </form>
             </div>

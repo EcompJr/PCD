@@ -28,6 +28,7 @@ class Membro {
         $conn = Connection::getInstance();
         $query = "SELECT * FROM usuarios WHERE login = \"$this->login\" AND  senha = \"$this->senha\"";
         $sql = $conn->query($query);
+        var_dump($sql);
         $row = $sql->fetch(PDO::FETCH_ASSOC);
         if($row){
                 return true;    
