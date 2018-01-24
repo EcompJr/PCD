@@ -12,6 +12,7 @@ if(isset($_POST['loginAttempt'])){
                                                                        //unset($_POST['loginAttempt']);
     $member = new Member($login, $password);
     
+    var_dump($member);
     
     if($member->auth()){
         $_SESSION['auth'] = true;

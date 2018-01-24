@@ -59,16 +59,16 @@
                 <form action = "../Routes/routes.php" method = "POST">
                     
                     <div class="form-group">
-                        <label for="email">Login de Usuário</label>
-                        <input style="width:300px;" type="text" class="form-control" id="idEmail" name = "nameEmail" placeholder="Enter email">
+                        <label for="login">Login de Usuário</label>
+                        <input style="width:300px;" type="text" class="form-control" id="login" name = "login" placeholder="Enter email">
                     </div>
                     
                     <div class="form-group">
-                        <label for="senha">Senha</label>
-                        <input style="width:300px;" type="password" class="form-control" id="idSenha" name = "nameSenha" placeholder="Password">
+                        <label for="password">Senha</label>
+                        <input style="width:300px;" type="password" class="form-control" id="password" name = "password" placeholder="Password">
                     </div>
                     
-                    <button type="submit" class="btn btn-primary">Entrar</button>
+                    <button type="submit" class="btn btn-primary" name="loginAttempt" >Entrar</button>
                 
                 </form>
             </div>

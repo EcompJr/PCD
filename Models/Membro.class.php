@@ -1,6 +1,6 @@
 <?php
 //selecione todas as variaveis com 1ou  + 'ctrl + d' e altere todos ao mesmo tempo! 
-require_once '../database/Connection.php';
+require_once '../DB/Connection.class.php';
 
 class Membro {
 
