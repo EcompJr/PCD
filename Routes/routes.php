@@ -1,6 +1,6 @@
 <?php
 
-require_once "../Models/Membro.class.php" ;
+//require_once "../Models/Membro.class.php" ;
 require_once "../Controllers/MembrosController.class.php" ;
 require_once "../Controllers/AdvertenciasController.class.php" ;
 
@@ -40,5 +40,30 @@ if(isset($_POST['logoff'])){
     session_destroy();
     header("location:../Views/login.php");
 }
+	//Cadastro
+	if(isset($_POST['register'])){
+        
+        $login = $_POST['loginCad'];
+        $senha = $_POST['senhaCad'];
+        $nome = $_POST['nomeCad'];
+        $cargo = $_POST['selectCargo'];
+        
+        $privilegio = null;
+        if($cargo=="Conselheiro" || $cargo=="Diretor"){
+            $privilegio = '1';
+        }else {
+            $privilegio = '0';
+        }
 
+        $codedSenha = md5($senha);
+        unset($_POST['register']);
+
+        $membrosController = new MembrosController();
+        $cad = $membrosController->cadastrarContas($login, $codedSenha, $nome, $cargo, $privilegio);
+        if($cad){
+            header("location:../Views/cadastro.php?cad=true");
+        }else{
+            header("location:../Views/cadastro.php?cad=false");
+        }
+    }
 ?>
