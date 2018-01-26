@@ -4,20 +4,23 @@
 <head>
 	<title>Adicionar Advertências</title>
 
-	<script type="text/javascript" src="Assets/js/jquery-3.2.1.js"></script>
-	<!-- <script src="Assets/js/javascript.js"></script> -->
-	<script type="text/javascript" src="Assets/js/painel.js"></script>
-	<script type="text/javascript" src="Assets/js/bootstrap-datepicker.min.js"></script>
-	<script type="text/javascript"src="Assets/js/bootstrap-datepicker.pt-BR.min.js"></script>
+	<script type="text/javascript" src="../assets/js/jquery-3.2.1.js"></script>
+	<!-- <script src="../assets/js/javascript.js"></script> -->
+	<script type="text/javascript" src="../assets/js/painel.js"></script>
+	<script type="text/javascript" src="../assets/js/bootstrap-datepicker.min.js"></script>
+	<script type="text/javascript"src="../assets/js/bootstrap-datepicker.pt-BR.min.js"></script>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="Assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+	
+
+	<link href="../assets/css/bootstrap-datepicker.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-	<link href="Assets/css/bootstrap-datepicker.css" rel="stylesheet">
+	
 	
     <!-- Icon -->
-	<link rel="icon" href="Assets/images/ecomp/logo.png"> 
+	<link rel="icon" href="../assets/images/ecomp/logo.png"> 
 
 </head>
 <body>
@@ -29,13 +32,13 @@
 					<span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
 				</button>
 				<a class="navbar-brand" href="#">
-				<img src="Assets/images/ecomp/logo.png" width="30">
+				<img src="../assets/images/ecomp/logo.png" width="30">
 				</a>
 				<!-- <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>-->
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse navbar-painel" id="bs-example-navbar-collapse-1">
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
 					<li>
 						<a class="page-scroll scrollSuave" href="#about">Sobre</a>
@@ -44,7 +47,7 @@
 						<a class="page-scroll scrollSuave" href="#rules">Regras</a>
 					</li>
 					<li>
-						<a class="page-scroll scrollSuave" href="pcd.html">Membros</a>
+						<a class="page-scroll scrollSuave" href="pcd.php">Membros</a>
 					</li>
 
 
@@ -55,13 +58,13 @@
 	<!-- /.container-fluid -->
 	</nav>
 	<div class="container-fluid">
-		<div class="row painel-content">
+		<div class="row">
 			<div id="divConteudo" class="container col-md-offset-1 col-md-10">
 				<h4 class="text-justify">Adicionar advertências</h4>
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-md-12">
-							<form id="advert" action="../routes/routes.php" method="POST" name="formAdv">
+							<form id="advert" action="routes/routes.php" method="POST" name="formAdv">
 								
 								<div class="row">
 									<div class="col-md-12 form-group" id="motivo">
@@ -84,7 +87,7 @@
 									</div>
 								</div>
 								<div class="row">
-									<div class="col-md-12 form-group">
+									<div class="col-md-6 form-group">
 										<label for="inpDate">Data</label>
 										<div class="input-group date">
 											<input id="inpDate" type="text" class="form-control">
@@ -93,14 +96,19 @@
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="row">		
-									<div id="pont" class="col-md-12 form-group">
+									<div id="pont" class="col-md-6 form-group">
 										<label>Pontos</label>
 										<br>
 										<input id="points" class="form-control" type="" name="pontos" title="Preenchido com base no motivo escolhido." readonly="readonly" value=" ">
 									</div>
 								</div>
+								<!-- <div class="row">		
+									<div id="pont" class="col-md-12 form-group">
+										<label>Pontos</label>
+										<br>
+										<input id="points" class="form-control" type="" name="pontos" title="Preenchido com base no motivo escolhido." readonly="readonly" value=" ">
+									</div>
+								</div> -->
 
 								<div class="row">		
 									<div id="membro" class="col-md-12 form-group">
