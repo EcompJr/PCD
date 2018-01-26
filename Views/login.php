@@ -4,15 +4,15 @@
 <head>
     <title>PCD - ECOMP Jr.</title>
     <meta charset="UTF-8">    
-    <link rel="stylesheet" href="../Assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <script src="../Assets/js/jquery-3.2.1.js"></script>
-    <script src="../Assets/js/javascript.js"></script>
+    <script src="../assets/js/jquery-3.2.1.js"></script>
+    <script src="../assets/js/javascript.js"></script>
 
     <!-- Icon -->
-    <link rel="icon" href="Assets/images/ecomp/logo.png">    
+    <link rel="icon" href="assets/images/ecomp/logo.png">    
 </head>
 
 <body>
@@ -24,7 +24,7 @@
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="#">
-                <img src="../Assets/images/ecomp/logo.png" width="30">
+                <img src="../assets/images/ecomp/logo.png" width="30">
                 </a>
                 <!-- <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>-->
             </div>
@@ -56,16 +56,19 @@
             <div class="header-content-inner">
                 <h1 id="message"></h1>
                 <hr>
-                <form action = "../Routes/routes.php" method = "POST" id = "loginform">
+                <form action="../Routes/routes.php" method="POST" id="loginform">
                     
-                    <div class="form-group">
-                        <label for="login">Login de Usuário</label>
-                        <input style="width:300px;" type="text" class="form-control" id="login" name = "login" placeholder="Enter email">
+                    <div class="row">
+                        <div class="form-group col-md-offset-4 col-md-4"> 
+                            <label for="login">Login</label>
+                            <input type="text" class="form-control" id="login" name = "login" placeholder="Enter email">
+                        </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="password">Senha</label>
-                        <input style="width:300px;" type="password" class="form-control" id="password" name = "password" placeholder="Password">
+                    <div class="row">
+                        <div class="form-group col-md-offset-4 col-md-4">
+                            <label for="password">Senha</label>
+                            <input type="password" class="form-control" id="password" name = "password" placeholder="Password">
+                        </div>
                     </div>
                     
                     <button type="submit" class="btn btn-primary" name="loginAttempt" id="loginAttempt" >Entrar</button>
