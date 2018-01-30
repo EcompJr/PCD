@@ -1,3 +1,22 @@
+<?php
+    session_start();
+    // //verifica se esta logado
+    // if (!isset($_SESSION['auth'])) {
+    //     header("location:../view/login.php?valid=false");
+    // }
+    //Verica o cargo do usuario, para exibir botao de gerenciar na navbar
+    //caso este seja administrador
+    $adm = null;
+    if(isset($_SESSION['cargo'])){
+        if($_SESSION['cargo']=="Diretor" || $_SESSION['cargo']=="Conselheiro"){
+            $adm = true;
+        }
+    }else{
+        $adm = false;
+        echo "EOQ";
+    }
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -40,6 +59,16 @@
                     <li><a class="page-scroll scrollSuave" href="#KN">K-N</a></li>
                     <li><a class="page-scroll scrollSuave" href="#OT">O-T</a></li>
                     <li><a class="page-scroll scrollSuave" href="#UZ">U-Z</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle page-scroll scrollSuave" data-toggle="dropdown" href="#">Gerenciar
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Advertências</a></li>
+                            <li><a href="#">Contas</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li><a class="page-scroll scrollSuave" href="">Logout</a></li>   
                 </ul>
             </div>
         </div>
