@@ -12,7 +12,7 @@
     <script src="../assets/js/javascript.js"></script>
 
     <!-- Icon -->
-    <link rel="icon" href="assets/images/ecomp/logo.png">    
+    <link rel="icon" href="../assets/images/ecomp/logo.png">    
 </head>
 
 <body>
@@ -56,18 +56,18 @@
             <div class="header-content-inner">
                 <h1 id="message"></h1>
                 <hr>
-                <form action="../Routes/routes.php" method="POST" id="loginform">
+                <form action="../routes/routes.php" method="POST" id="loginform">
                     
                     <div class="row">
                         <div class="form-group col-md-offset-4 col-md-4"> 
                             <label for="login">Login</label>
-                            <input type="text" class="form-control" id="login" name = "login" placeholder="Enter email">
+                            <input type="text" class="form-control" id="login" name="login" placeholder="Enter email">
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-offset-4 col-md-4">
                             <label for="password">Senha</label>
-                            <input type="password" class="form-control" id="password" name = "password" placeholder="Password">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                         </div>
                     </div>
                     

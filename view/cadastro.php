@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Adicionar Advertências</title>
+	<title>Cadastro PCD</title>
 
 	<script type="text/javascript" src="../assets/js/jquery-3.2.1.js"></script>
 	<!-- <script src="../assets/js/javascript.js"></script> -->
@@ -64,7 +64,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12">
-						<form id="cad" action="../Routes/routes.php" method="POST" name="formCad">
+						<form id="cad" action="../routes/routes.php" method="POST" name="formCad">
 							
 							<div class="row">
 								<div class="col-md-12 form-group" id="cargo">
@@ -104,7 +104,7 @@
 							
 							<div class="row">
 								<div class="col-md-3 form-group">
-									<button id="register" type="submit" class="btn btn-primary"  name="register">Submit <i class="fa fa-send"></i></button>
+									<button id="registerBTN" type="submit" class="btn btn-primary"  name="register">Submit <i class="fa fa-send"></i></button>
 								</div>		
 							</div>
 						</form>
