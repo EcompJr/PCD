@@ -17,7 +17,7 @@
 			// verificar se o valor de login e senha são iguais
 			
 			$conn = Connection::getInstance();
-			$queryAuth = "SELECT * FROM usuarios WHERE login = \"$login\" AND senha = \"$senha\";";
+			$queryAuth = "SELECT * FROM usuarios WHERE login = \"$login\" AND password = \"$senha\";";
 			$sql = $conn->query($queryAuth);
 			$row = $sql->fetch(PDO::FETCH_ASSOC);
 			
