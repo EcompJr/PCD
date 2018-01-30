@@ -69,7 +69,7 @@
 							<div class="row">
 								<div class="col-md-12 form-group" id="cargo">
 								<label for="idMotivo">Cargo</label>
-									<select id="selectCargo" class="form-control" name="selectCargo">
+									<select required id="selectCargo" class="form-control" name="selectCargo">
 										<option value="" disabled selected>Escolha uma das opções</option>	
 										<option value="Conselheiro">Conselheiro</option>
 										<option value="Diretor">Diretor</option>
