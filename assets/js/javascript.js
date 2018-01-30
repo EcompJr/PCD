@@ -132,6 +132,18 @@ $(document).ready(function () {
         $(this).removeClass("hover");
     });
 
-   
+    //Logout
+    $("#logout").click(function(){
+        
+        $.ajax({
+            url: 'http://localhost:8081/routes/routes.php',
+            type: 'get',
+            data:{action:'logoff'},
+            success: function(){
+            alert("Deslogado com sucesso!");
+                location.reload();
+            }
+        });
+    });
 
 });
