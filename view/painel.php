@@ -79,7 +79,7 @@
 									</div>
 								</div>
 								<div class="row">
-									<div class="col-md-12 form-group">
+									<div class="col-md-6 form-group">
 										<label for="inpDate">Data
 										<div class="input-group date">
 											<input id="inpDate" type="text" class="form-control">
@@ -89,9 +89,7 @@
 										</div>
 										</label>
 									</div>
-								</div>
-								<div class="row">		
-									<div id="pont" class="col-md-12 form-group">
+									<div id="pont" class="col-md-6 form-group">
 										<label>Pontos</label>
 										<br>
 										<input id="points" class="form-control" type="" name="pontos" title="Preenchido com base no motivo escolhido." readonly="readonly" value=" ">
