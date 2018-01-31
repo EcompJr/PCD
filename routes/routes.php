@@ -50,10 +50,9 @@ session_start();
 		if ($user) {
 
             $_SESSION['auth']  = true;     
-			$_SESSION['cargo'] = $user['cargo'];
-			$_SESSION['nome'] = $user['nome'];
+			$_SESSION['cargo'] = $user['occupation'];
+			$_SESSION['nome'] = $user['name'];
 			$_SESSION['uid'] = $user['id'];
-
 
             header("location:../view/pcd.php");
 
@@ -69,12 +68,14 @@ session_start();
     }
     
     //Logout
-    if(isset($_POST['logoff'])){
+    if (isset($_GET['action']) && $_GET['action'] == "logoff") {
+       
         unset($_SESSION['auth']);
-        unset($_POST['logoff']);
-        session_destroy();
-        header("location:../view/login.php");
+        unset($_GET['action']);
+        // header("location:../view/login.php");
+        session_destroy();     
     }
+
 	//Cadastro
 	if(isset($_POST['register'])){
         

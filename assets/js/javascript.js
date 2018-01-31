@@ -140,8 +140,8 @@ $(document).ready(function () {
             type: 'get',
             data:{action:'logoff'},
             success: function(){
-            alert("Deslogado com sucesso!");
-                location.reload();
+                alert("Deslogado com sucesso!");
+                window.location= "http://localhost:8081/view/login.php?logout=true";
             }
         });
     });
