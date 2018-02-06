@@ -1,3 +1,23 @@
+<?php
+    session_start();
+    require_once("../controller/MembrosController.class.php");
+    if (!isset($_SESSION['auth'])) {
+	//	header("location:../view/login.php?valid=false");	
+		echo "not logged";			
+	}
+    // $adm = null;
+    // //Verica o cargo do usuario, para exibir botao de gerenciar na navbar
+    // //caso este seja administrador
+    // if(isset($_SESSION['cargo'])){
+    //     if($_SESSION['cargo']=="Diretor" || $_SESSION['cargo']=="Conselheiro"){
+    //         $adm = true;
+    //     }else{
+    //         header("location:../view/profile.php?adm=false");
+    //     }
+    // }
+    $membrosController = new MembrosController();
+	$contas = $membrosController->getContas();
+?>
 
 <!DOCTYPE html>
 <html>
@@ -99,9 +119,22 @@
 								<div class="row">		
 									<div id="membro" class="col-md-12 form-group">
 									<label for="membro">Penalizado</label>
-										<input id="membro" class="form-control" type="text" name="membro">
+										<select required id="membro" class="form-control" type="text" name="membro">
+											<option value="" disabled selected>Escolha um membro</option>
+											<?php
+												for ($i=0; $i < sizeof($contas) ; $i++) {
+													echo "<option value=".$contas[$i]['name'].">".$contas[$i]['name']."</option>";
+												}
+											?>
+										</select>
 									</div>
 								</div>
+								<!-- <div class="row">		
+									<div id="membro" class="col-md-12 form-group">
+									<label for="membro">Penalizado</label>
+										<input id="membro" class="form-control" type="text" name="membro">
+									</div>
+								</div> -->
 								<div class="row">
 									<div class="col-md-12 form-group">
 									<label for="resp">Responsável</label>
