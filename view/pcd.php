@@ -6,7 +6,7 @@
     // }
     //Verica o cargo do usuario, para exibir botao de gerenciar na navbar
     //caso este seja administrador
-    if(!isset($_SESSION['cargo'])){
+    if(!isset($_SESSION['auth'])){
         echo "not logged";
     }
     $adm = null;
@@ -63,8 +63,8 @@
                     <li><a class="page-scroll scrollSuave" href="#KN">K-N</a></li>
                     <li><a class="page-scroll scrollSuave" href="#OT">O-T</a></li>
                     <li><a class="page-scroll scrollSuave" href="#UZ">U-Z</a></li>
-                    <?php if($adm == true){echo '<li class="dropdown"><a class="dropdown-toggle page-scroll scrollSuave" data-toggle="dropdown" href="#">Gerenciar<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="#">Advertências</a></li><li><a href="#">Contas</a></li></ul></li>';}?>
-                    <?php if(isset($_SESSION['cargo'])){echo '<li><a id="logout" type="button" class="btn btn-default navbar-btn page-scroll">Logout</a></li>';}?>
+                    <?php if($adm == true){echo '<li class="dropdown"><a class="dropdown-toggle page-scroll scrollSuave" data-toggle="dropdown" href="#">Gerenciar<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="painel.php">Advertências</a></li><li><a href="contas.php">Contas</a></li></ul></li>';}?>
+                    <?php if(isset($_SESSION['cargo'])){echo '<li><button id="logout" class="btn btn-default navbar-btn page-scroll">Logout</button></li>';}?>
                    
                 </ul>
             </div>
