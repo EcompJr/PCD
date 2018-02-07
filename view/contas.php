@@ -82,10 +82,8 @@
 	<div class="row">
 		<div id="divConteudo" class="container col-md-offset-2 col-md-8">
             <div class="row">
-                <div class="col-md-3">
-                    <h4 class="text-justify">Gerenciar Contas</h4>
-                </div>
-                <div class="col-md-offset-7 col-md-2">
+                <div class="table-head">
+                    <h4 class="text-justify">Gerenciar Contas</h4>          
                     <button class="btn btn-primary" onclick="location.href='cadastro.php';">Cadastrar</button>
                 </div>
             </div>
@@ -98,7 +96,7 @@
                                     <th>Login</th>
                                     <th>Nome</th>
                                     <th>Cargo</th>
-                                    <th id="emptyTR">&nbsp;</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -111,7 +109,7 @@
                                             echo "<td>".$contas[$i]['name']."</td>";
                                             echo "<td>".$contas[$i]['occupation']."</td>";
                                             
-                                            echo "<td><button id='btnEdit' type=\"button\"  class=\"botaoE btn-primary\" onclick=\"editId($id)\"><span class=\"glyphicon glyphicon-edit\" aria-hidden=\"true\"></span></button>&nbsp&nbsp<button id='btnDelete' type=\"button\"  class=\"botaoD btn-danger\" onclick=\"deleteId($id)\"><span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span></button></td>";
+                                            echo "<td><button id='btnEdit' type=\"button\"  class=\"botaoE btn-primary\" style=\"margin-right: 10px;\" onclick=\"editId($id)\"><span class=\"glyphicon glyphicon-edit\" aria-hidden=\"true\"></span></button><button id='btnDelete' type=\"button\"  class=\"botaoD btn-danger\" onclick=\"deleteId($id)\"><span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span></button></td>";
                                             echo "</tr>";	
                                             				
                                         }
