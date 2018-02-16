@@ -7,7 +7,7 @@
     //Verica o cargo do usuario, para exibir botao de gerenciar na navbar
     //caso este seja administrador
     if(!isset($_SESSION['auth'])){
-        echo "not logged";
+        //echo "not logged";
     }
     $adm = null;
     if(isset($_SESSION['cargo'])){
