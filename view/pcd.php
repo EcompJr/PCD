@@ -12,11 +12,9 @@
     $adm = null;
     if(isset($_SESSION['cargo'])){
         if($_SESSION['cargo']=="Diretor" || $_SESSION['cargo']=="Conselheiro"){
-            $adm = true;  
-            echo $adm;
+            $adm = true;            
         }else{
-            $adm = false;   
-            echo $_SESSION['cargo'];
+            $adm = false;       
         }
     }
 ?>
@@ -64,7 +62,7 @@
                     <li><a class="page-scroll scrollSuave" href="#OT">O-T</a></li>
                     <li><a class="page-scroll scrollSuave" href="#UZ">U-Z</a></li>
                     <?php if($adm == true){echo '<li class="dropdown"><a class="dropdown-toggle page-scroll scrollSuave" data-toggle="dropdown" href="#">Gerenciar<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="painel.php">Advertências</a></li><li><a href="contas.php">Contas</a></li></ul></li>';}?>
-                    <?php if(isset($_SESSION['cargo'])){echo '<li><button id="logout" class="btn btn-default navbar-btn page-scroll">Logout</button></li>';}?>
+                    <?php if(isset($_SESSION['auth'])){echo '<li><button id="logout" class="btn btn-default navbar-btn page-scroll">Logout</button></li>';}?>
                    
                 </ul>
             </div>
