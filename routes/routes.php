@@ -6,35 +6,6 @@ require_once "../controller/AdvertenciasController.class.php" ;
 
 session_start();
 
-    // if(isset($_POST['loginAttempt'])){
-    //     $login = $_POST['login'];
-    //     $password = sha1($_POST['password']);
-    //                                                                     //unset($_POST['loginAttempt']);
-    //     $member = new Membro($login, $password, null, null, null, null, null, null, null);
-        
-    //     var_dump($member);
-        
-    //     if($member->auth()){
-    //         $_SESSION['auth'] = true;
-    //         $_SESSION['uid'] = $member->getId();;
-    //         $_SESSION["login"] = $member->getLogin();
-    //         $_SESSION['password'] = $member->getPassword();
-    //         $_SESSION["occupation"] = $member->getOccupation();
-    //         $_SESSION["name"] = $member->getName();
-    //         $_SESSION["privilege"] = $member->getPrivilege();
-    //         $_SESSION["history"] = $member->getHistory();
-    //         $_SESSION["score"] = $member->getScore();
-            
-    //         if($member->getPrivilege()){
-    //             header("location:../Views/painel.php?op=adm");
-    //         }else{
-    //             header("location:../Views/painel.php?op=member");
-    //         }
-    //     } else {
-    //         header("location:../Views/login.php?valid=false");
-    //     }
-    // }
-
     //Login
 	if (isset($_POST['loginAttempt'])){
 		
@@ -102,4 +73,31 @@ session_start();
             header("location:../view/cadastro.php?cad=false");
         }
     }
+
+    //Adicionar advertencia
+	if(isset($_POST['addAdvertence'])){
+		
+		unset($_POST['addAdvertence']);
+		
+		$motivo = $_POST['selectMotivo'];
+		$data = $_POST['dataAdv'];
+		$pontos = $_POST['pontos'];
+		$responsavel = $_POST['responsavel'];
+		$indeferida = $_POST['selectIndef'];
+		$membro = $_POST['selectPenalizado'];
+	
+		$membrosController = new MembrosController();
+   		$conta = $membrosController->getContaByNome($membro);
+		$membroId = $conta[0]['id'];
+		
+		$advController = new AdvertenciasController();
+		$add = $advController->addAdvertenciaDB($motivo, $data, $pontos, $responsavel, $indeferida, $membroId);
+		
+		if($add){
+			header("location:../view/painel.php?add=true");
+		}else{
+			header("location:../view/painel.php?add=false");
+		}
+
+	}
 ?>
