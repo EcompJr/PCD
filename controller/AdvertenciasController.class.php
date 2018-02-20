@@ -15,7 +15,7 @@
 
 			$advertencias = [];
 			$conn = Connection::getInstance();
-			$query = "SELECT * FROM advertencias;";
+			$query = "SELECT * FROM advertences;";
 			$sql = $conn->query($query);
 			while($row = $sql->fetch(PDO::FETCH_ASSOC)){
         	array_push($advertencias, $row);
@@ -28,7 +28,7 @@
 
 			$advertencias = [];
 			$conn = Connection::getInstance();
-			$query = "SELECT * FROM advertencias WHERE id=\"$id\";";
+			$query = "SELECT * FROM advertences WHERE id=\"$id\";";
 			$sql = $conn->query($query);
 			while($row = $sql->fetch(PDO::FETCH_ASSOC)){
         	array_push($advertencias, $row);
@@ -36,18 +36,10 @@
 			return $advertencias;
 		}
 
-		public function addAdvertenciaDB($motivo, $data, $pontos, $responsavel, $indeferida, $membroId){
+		public function addAdvertenciaDB($motivo, $data, $pontos, $responsavel, $indeferida, $membroId, $membro){
 			$conn = Connection::getInstance();
-			$queryAdd = "INSERT INTO advertences (`reason`, `data`, `points`, `responsible`, `dismissed`, `memberId`) VALUES (\"$motivo\", \"$data\", \"$pontos\", \"$responsavel\", \"$indeferida\", \"$membroId\");";
+			$queryAdd = "INSERT INTO advertences (`reason`, `data`, `points`, `responsible`, `dismissed`, `memberId`, `member`) VALUES (\"$motivo\", \"$data\", \"$pontos\", \"$responsavel\", \"$indeferida\", \"$membroId\", \"$membro\");";
 			$sql = $conn->query($queryAdd);
-			// $login = 'qwerty';
-			// $senha = 'qwerty';
-			// $nome = 'qwerty';
-			// $cargo = 'qwerty';
-			// $privilegio = true;
-			// $queryCad = "INSERT INTO usuarios (`login`, `password`, `name`, `occupation`, `score`, `history`, `privilege`) VALUES (\"$login\", \"$senha\", \"$nome\", \"$cargo\", \"$pontos\", \" \", \"$privilegio\");";
-			// $sql = $conn->query($queryCad);
-
 			return $sql;
 		}
 
@@ -55,7 +47,7 @@
 		public function editarAdvertencia($motivo, $data, $pontos, $responsavel, $indeferida, $advId){
 
 			$conn = Connection::getInstance();
-			$query = "UPDATE advertencias SET motivo=\"$motivo\", data=\"$data\", pontos=\"$pontos\", responsavel=\"$responsavel\", indeferida=\"$indeferida\" WHERE id=\"$advId\";";
+			$query = "UPDATE advertences SET motivo=\"$motivo\", data=\"$data\", pontos=\"$pontos\", responsavel=\"$responsavel\", indeferida=\"$indeferida\" WHERE id=\"$advId\";";
 			$sql = $conn->query($query);
 			
 			return $sql;
@@ -65,7 +57,7 @@
 		public function deletarAdvertencia($id){
 
 			$conn = Connection::getInstance();
-			$query = "DELETE FROM advertencias WHERE id=\"$id\";";
+			$query = "DELETE FROM advertences WHERE id=\"$id\";";
 			$sql = $conn->query($query);
 			
 			return $sql;
