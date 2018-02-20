@@ -102,7 +102,7 @@
 									<div class="col-md-6 form-group">
 										<label for="inpDate">Data
 										<div class="input-group date">
-											<input id="inpDate" type="text" class="form-control">
+											<input id="inpDate" type="text" name="dataAdv" class="form-control">
 											<div class="input-group-addon">
 												<span class="glyphicon glyphicon-th"></span>
 											</div>
@@ -119,7 +119,7 @@
 								<div class="row">		
 									<div id="membro" class="col-md-12 form-group">
 									<label for="membro">Penalizado</label>
-										<select required id="membro" class="form-control" type="text" name="membro">
+										<select required id="membro" class="form-control" type="text" name="selectPenalizado">
 											<option value="" disabled selected>Escolha um membro</option>
 											<?php
 												for ($i=0; $i < sizeof($contas) ; $i++) {
@@ -145,16 +145,17 @@
 								<div class="row">
 									<div class="col-md-2 form-group">
 										<label>Indeferida</label>
-										<select id="idIndef" class="form-control" name="selectIndef">
-											<option value="0" selected>Não</option>
-											<option value="1" >Sim</option>
+										<select id="idIndef" required class="form-control" name="selectIndef">
+											<option value="" disabled selected>Escolha abaixo</option>	
+											<option value="0">Não</option>
+											<option value="1">Sim</option>
 										</select>
 										
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-md-3 form-group">
-										<button id="envAdv" type="submit" class="btn btn-primary"  name="envAdv">Submit <i class="fa fa-send"></i></button>
+										<button id="envAdv" type="submit" class="btn btn-primary"  name="addAdvertence">Submit <i class="fa fa-send"></i></button>
 									</div>		
 								</div>
 							</form>
