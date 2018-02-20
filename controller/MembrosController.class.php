@@ -60,7 +60,7 @@
 
 			$contas = [];
 			$conn = Connection::getInstance();
-			$query = "SELECT * FROM usuarios WHERE nome=\"$nome\";";
+			$query = "SELECT * FROM usuarios WHERE name=\"$nome\";";
 			$sql = $conn->query($query);
 			while($row = $sql->fetch(PDO::FETCH_ASSOC)){
         	array_push($contas, $row);
@@ -72,7 +72,7 @@
 		public function editarConta($id, $login, $nome, $cargo){
 
 			$conn = Connection::getInstance();
-			$query = "UPDATE usuarios SET login=\"$login\", nome=\"$nome\", cargo=\" $cargo\" WHERE id=\"$id\";";
+			$query = "UPDATE usuarios SET login=\"$login\", name=\"$nome\", occupation=\" $cargo\" WHERE id=\"$id\";";
 			$sql = $conn->query($query);
 			
 			return $sql;
