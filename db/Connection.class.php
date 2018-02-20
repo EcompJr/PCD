@@ -1,11 +1,7 @@
 <?php
 class Connection {
     private static  $instance;
-    private $host = "localhost";
-    private $dbname = "pcd_db";
-    private $usernameDb = "root";
-    private $passwdDb = "root";
-    
+
     private function __construct(){
         //
     }
