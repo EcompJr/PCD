@@ -89,9 +89,10 @@ session_start();
 		$membrosController = new MembrosController();
    		$conta = $membrosController->getContaByNome($membro);
 		$membroId = $conta[0]['id'];
-		
+		print_r($membroId);
+
 		$advController = new AdvertenciasController();
-		$add = $advController->addAdvertenciaDB($motivo, $data, $pontos, $responsavel, $indeferida, $membroId);
+		$add = $advController->addAdvertenciaDB($motivo, $data, $pontos, $responsavel, $indeferida, $membroId, $membro);
 		
 		if($add){
 			header("location:../view/painel.php?add=true");
