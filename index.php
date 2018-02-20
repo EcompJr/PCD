@@ -197,7 +197,7 @@
                         <br>
                         <hr class="dark">
                         <br>
-                        <a href="pcd.html" class="page-scroll btn btn-primary btn-xl sr-button scrollSuave">Conheça os Membros</a>
+                        <a href="view/pcd.php" class="page-scroll btn btn-primary btn-xl sr-button scrollSuave">Conheça os Membros</a>
                     </div>
                 </div>
             </div>
