@@ -28,19 +28,17 @@
    <!-- GOOGLE FONT -->
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
     <script src="https://use.fontawesome.com/330b781289.js"></script>
 
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/stylepcd.css">
     <script src="../assets/js/jquery-3.2.1.js"></script>
     <script src="../assets/js/javascript.js"></script>  
 
     <!-- Icon -->
     <link rel="icon" href="../assets/images/ecomp/logo.png">
 
-    <!-- Modal plugin -->
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>      
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/stylepcd.css">
 </head>
 
 <body>
@@ -914,9 +912,7 @@
     </div>
     </div>
     </div>
-</body>
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
-
+</body>
 </html>
