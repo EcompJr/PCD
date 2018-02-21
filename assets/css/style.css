@@ -248,6 +248,7 @@ header .header-content .header-content-inner p {
 #divConteudo .table-head{
   display: flex;
   justify-content: space-between;
+  margin-bottom: 5px;
   padding: 0 1.5em;
 }
 
