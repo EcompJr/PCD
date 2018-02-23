@@ -48,6 +48,7 @@
 
 			$conn = Connection::getInstance();
 			$query = "UPDATE advertences SET motivo=\"$motivo\", data=\"$data\", pontos=\"$pontos\", responsavel=\"$responsavel\", indeferida=\"$indeferida\" WHERE id=\"$advId\";";
+
 			$sql = $conn->query($query);
 			
 			return $sql;
