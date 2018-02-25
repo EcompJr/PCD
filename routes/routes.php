@@ -92,11 +92,11 @@ session_start();
 		$pontos = $_POST['pontos'];
 		$responsavel = $_POST['responsavel'];
 		$indeferida = $_POST['selectIndef'];
-		$membro = $_POST['selectPenalizado'];
+		$membroId = $_POST['selectPenalizado'];
 
 		$membrosController = new MembrosController();
-		$conta = $membrosController->getContaByNome($membro);
-		$membroId = $conta[0]['id'];
+		$conta = $membrosController->getContaById($membroId);
+		$membro = $conta[0]['name'];
 
 		$advController = new AdvertenciasController();
 		$add = $advController->addAdvertenciaDB($motivo, $data, $pontos, $responsavel, $indeferida, $membroId, $membro);
