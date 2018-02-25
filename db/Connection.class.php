@@ -8,7 +8,7 @@ class Connection {
     public static function getInstance(){
         if(!isset(self::$instance)){
             try{
-                self::$instance = new PDO("mysql:host=localhost;dbname=pcd_db", "root", "", array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+                self::$instance = new PDO("mysql:host=localhost;dbname=pcd_db", "root", "root", array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
             } catch (PDOException $e){
                 var_dump($e);
             }
