@@ -93,7 +93,7 @@
 											<option value="" disabled selected>Escolha um membro</option>
 											<?php
 												for ($i=0; $i < sizeof($contas) ; $i++) {
-													echo "<option value=".$contas[$i]['name'].">".$contas[$i]['name']."</option>";
+													echo "<option value=".$contas[$i]['id'].">".$contas[$i]['name']."</option>";
 												}
 											?>
 										</select>
