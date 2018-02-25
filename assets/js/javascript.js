@@ -54,7 +54,7 @@ $(document).ready(function () {
                     clearInterval(interval2);
                 appear2 = true;
             }, 100);
-    }());
+    });
 
     //$("#logo").hide();
 
