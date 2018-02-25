@@ -36,7 +36,7 @@
 
 			$contas = [];
 			$conn = Connection::getInstance();
-			$query = "SELECT * FROM usuarios;";
+			$query = "SELECT * FROM usuarios ORDER BY name ASC;";
 			$sql = $conn->query($query);
 			while($row = $sql->fetch(PDO::FETCH_ASSOC)){
         	array_push($contas, $row);
