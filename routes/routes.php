@@ -85,11 +85,10 @@ session_start();
 		$responsavel = $_POST['responsavel'];
 		$indeferida = $_POST['selectIndef'];
 		$membro = $_POST['selectPenalizado'];
-	
+
 		$membrosController = new MembrosController();
-   		$conta = $membrosController->getContaByNome($membro);
+		$conta = $membrosController->getContaByNome($membro);
 		$membroId = $conta[0]['id'];
-		print_r($membroId);
 
 		$advController = new AdvertenciasController();
 		$add = $advController->addAdvertenciaDB($motivo, $data, $pontos, $responsavel, $indeferida, $membroId, $membro);
@@ -100,5 +99,19 @@ session_start();
 			header("location:../view/painel.php?add=false");
 		}
 
+	}
+
+	//Delete ADV
+	if(isset($_GET['delAdv'])){
+		
+		$advController = new AdvertenciasController();
+
+		$del = $advController->deletarAdvertencia($_GET['delAdv']);	
+		//nao funcionou a verificacao, mas a funcao sim
+		if($del > '0'){
+			header("location:../view/advertencias.php?delete=true");
+		}else{
+			header("location:../view/advertencias.php?delete=false");
+		}
 	}
 ?>
