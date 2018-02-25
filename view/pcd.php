@@ -23,9 +23,36 @@
 
     $membrosController = new MembrosController();
     $contas = $membrosController->getContas();
+    $contasAG = 0;
+    $contasKN = 0;
+    $contasOT = 0;
+    $contasUZ = 0;
+    $num = 0;
+    for ($z=0; $z < sizeof($contas) ; $z++){
+        if(substr($contas[$z]["name"],0,1) == 'A' || substr($contas[$z]["name"],0,1) == 'B' || substr($contas[$z]["name"],0,1) == 'C' || substr($contas[$z]["name"],0,1) == 'D' || substr($contas[$z]["name"],0,1) == 'E' || substr($contas[$z]["name"],0,1) == 'F' || substr($contas[$z]["name"],0,1) == 'G'){
+            $contasAG++;
+        }
+        elseif(substr($contas[$z]["name"],0,1) == 'K' || substr($contas[$z]["name"],0,1) == 'L' || substr($contas[$z]["name"],0,1) == 'M' || substr($contas[$z]["name"],0,1) == 'N'){     
+            $contasKN= $z;
+        }
+        elseif(substr($contas[$z]["name"],0,1) == 'O' || substr($contas[$z]["name"],0,1) == 'P' || substr($contas[$z]["name"],0,1) == 'Q' || substr($contas[$z]["name"],0,1) == 'R' || substr($contas[$z]["name"],0,1) == 'S' || substr($contas[$z]["name"],0,1) == 'T'){     
+            $contasOT= $z;
+        }
+        elseif(substr($contas[$z]["name"],0,1) == 'U' || substr($contas[$z]["name"],0,1) == 'V' || substr($contas[$z]["name"],0,1) == 'W' || substr($contas[$z]["name"],0,1) == 'X' || substr($contas[$z]["name"],0,1) == 'Y' || substr($contas[$z]["name"],0,1) == 'Z'){     
+            $contasUZ= $z;
+        }
+        
+    }
+    echo $contasAG;
+    echo "<br>";
+    echo $contasKN;
+    echo "<br>";
+    echo $contasOT;
+    echo "<br>";
+    echo $contasUZ;
 
     $advController = new AdvertenciasController();
-	$adv = $advController->getAdvertenciasDB();
+	$adv = $advController->getAdvertenciasByID();
 ?>
 
 <!DOCTYPE html>
@@ -98,13 +125,15 @@
                 
                 <?php
                     $x= 1;
-                    for ($i=0; $i < sizeof($contas) ; $i++) {
+                    
+                    for ($i=0; $i < $contasAG ; $i++) {
                         
-                        echo '<!-- Start Member --><div id="effect-1" class="col-lg-4 col-sm-6 effects clearfix"><div class="img img-memberIcon img-circle img-responsive"><img class="memberIcon" src="../assets/images/ecomp/membros/'.$contas[$i]["login"].'.jpg" width=200 height=200 alt="" /><div class="overlay"><a href="#window'.$x.'" data-toggle="modal" class="expand pointsText">20 PONTOS</a></div></div><div class="modal fade" id="window'.$x.'" tabindex="-1" role="dialog" aria-labelledby="window'.$x.'" aria-hidden="true"><div class="modal-dialog modal-lg modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><img class="img img-responsive img-companyLogo" src="../assets/images/ecomp/logoNome.png" width="200" height="50"></img><h1 id="insideWidow" class="memberName text-right"><i class="fa fa-user-o" aria-hidden="true"></i>'.$contas[$i]['name'].'<div id="insideWidow" class="memberClassification text-right">'.$contas[$i]['occupation'].'</div></h1></div><div class="modal-body"><img class="img-memberWindow img img-rounded img-responsive" src="../assets/images/ecomp/membros/'.$contas[$i]["login"].'.jpg" alt=""></img><hr class="dark"><p class="text-center historicTitle">HISTÓRICO</p><hr class="dark"><div><p class="text-Window text-center"><span class="numberPunition">#1</span> <span class="topicPunition">PERDEU</span> <span class="numberPunition">XX</span> <span class="topicPunition">PONTOS EM XX/XX/XXXX POR XXXXXXXXXX<br><span class="responsiblePunition">RESPONSÁVEL:</span> XXXXXXXX</p><hr><p class="text-Window text-center"><span class="numberPunition">#2</span> <span class="topicPunition">PERDEU</span> <span class="numberPunition">XX</span> <span class="topicPunition">PONTOS EM XX/XX/XXXX POR XXXXXXXXXX<br><span class="responsiblePunition">RESPONSÁVEL:</span> XXXXXXXX</p><hr><p class="text-Window text-center"><span class="numberPunition">#3</span> <span class="topicPunition">PERDEU</span> <span class="numberPunition">XX</span> <span class="topicPunition">PONTOS EM XX/XX/XXXX POR XXXXXXXXXX<br><span class="responsiblePunition">RESPONSÁVEL:</span> XXXXXXXX</p><hr></div></div></div></div></div><h3 class="memberName">'.$contas[$i]['name'].'<div class="memberClassification">'.$contas[$i]['occupation'].'</div></h3></div>';
+                        echo '<!-- Start Member --><div id="effect-1" class="col-lg-4 col-sm-6 effects clearfix"><div class="img img-memberIcon img-circle img-responsive"><img class="memberIcon" src="../assets/images/ecomp/membros/'.$contas[$i]["login"].'.jpg" width=200 height=200 alt="" /><div class="overlay"><a href="#window'.$x.'" data-toggle="modal" class="expand pointsText">'.$contas[$i]['score'].' PONTOS</a></div></div><div class="modal fade" id="window'.$x.'" tabindex="-1" role="dialog" aria-labelledby="window'.$x.'" aria-hidden="true"><div class="modal-dialog modal-lg modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><img class="img img-responsive img-companyLogo" src="../assets/images/ecomp/logoNome.png" width="200" height="50"></img><h1 id="insideWidow" class="memberName text-right"><i class="fa fa-user-o" aria-hidden="true"></i>'.$contas[$i]['name'].'<div id="insideWidow" class="memberClassification text-right">'.$contas[$i]['occupation'].'</div></h1></div><div class="modal-body"><img class="img-memberWindow img img-rounded img-responsive" src="../assets/images/ecomp/membros/'.$contas[$i]["login"].'.jpg" alt=""></img><hr class="dark"><p class="text-center historicTitle">HISTÓRICO</p><hr class="dark"><div><p class="text-Window text-center"><span class="numberPunition">#1</span> <span class="topicPunition">PERDEU</span> <span class="numberPunition">XX</span> <span class="topicPunition">PONTOS EM XX/XX/XXXX POR XXXXXXXXXX<br><span class="responsiblePunition">RESPONSÁVEL:</span> XXXXXXXX</p><hr><p class="text-Window text-center"><span class="numberPunition">#2</span> <span class="topicPunition">PERDEU</span> <span class="numberPunition">XX</span> <span class="topicPunition">PONTOS EM XX/XX/XXXX POR XXXXXXXXXX<br><span class="responsiblePunition">RESPONSÁVEL:</span> XXXXXXXX</p><hr><p class="text-Window text-center"><span class="numberPunition">#3</span> <span class="topicPunition">PERDEU</span> <span class="numberPunition">XX</span> <span class="topicPunition">PONTOS EM XX/XX/XXXX POR XXXXXXXXXX<br><span class="responsiblePunition">RESPONSÁVEL:</span> XXXXXXXX</p><hr></div></div></div></div></div><h3 class="memberName">'.$contas[$i]['name'].'<div class="memberClassification">'.$contas[$i]['occupation'].'</div></h3></div>';
                         $x++;
                     }
                 ?> 
-    </div>
+            </div>
+        </div>
                 <!-- End Member -->                
     <!-- End members set -->
     
@@ -115,9 +144,17 @@
             <h2 class="page-header">K-N</h2>
         </div>
 
-        <div class="container"></div>
-            <div class="row"></div>
-             
+        <div class="container">
+            <div class="row">
+                <?php
+                    for ($i=$contasAG; $i <= $contasKN ; $i++) {
+                        
+                        echo '<!-- Start Member --><div id="effect-1" class="col-lg-4 col-sm-6 effects clearfix"><div class="img img-memberIcon img-circle img-responsive"><img class="memberIcon" src="../assets/images/ecomp/membros/'.$contas[$i]["login"].'.jpg" width=200 height=200 alt="" /><div class="overlay"><a href="#window'.$x.'" data-toggle="modal" class="expand pointsText">'.$contas[$i]['score'].' PONTOS</a></div></div><div class="modal fade" id="window'.$x.'" tabindex="-1" role="dialog" aria-labelledby="window'.$x.'" aria-hidden="true"><div class="modal-dialog modal-lg modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><img class="img img-responsive img-companyLogo" src="../assets/images/ecomp/logoNome.png" width="200" height="50"></img><h1 id="insideWidow" class="memberName text-right"><i class="fa fa-user-o" aria-hidden="true"></i>'.$contas[$i]['name'].'<div id="insideWidow" class="memberClassification text-right">'.$contas[$i]['occupation'].'</div></h1></div><div class="modal-body"><img class="img-memberWindow img img-rounded img-responsive" src="../assets/images/ecomp/membros/'.$contas[$i]["login"].'.jpg" alt=""></img><hr class="dark"><p class="text-center historicTitle">HISTÓRICO</p><hr class="dark"><div><p class="text-Window text-center"><span class="numberPunition">#1</span> <span class="topicPunition">PERDEU</span> <span class="numberPunition">XX</span> <span class="topicPunition">PONTOS EM XX/XX/XXXX POR XXXXXXXXXX<br><span class="responsiblePunition">RESPONSÁVEL:</span> XXXXXXXX</p><hr><p class="text-Window text-center"><span class="numberPunition">#2</span> <span class="topicPunition">PERDEU</span> <span class="numberPunition">XX</span> <span class="topicPunition">PONTOS EM XX/XX/XXXX POR XXXXXXXXXX<br><span class="responsiblePunition">RESPONSÁVEL:</span> XXXXXXXX</p><hr><p class="text-Window text-center"><span class="numberPunition">#3</span> <span class="topicPunition">PERDEU</span> <span class="numberPunition">XX</span> <span class="topicPunition">PONTOS EM XX/XX/XXXX POR XXXXXXXXXX<br><span class="responsiblePunition">RESPONSÁVEL:</span> XXXXXXXX</p><hr></div></div></div></div></div><h3 class="memberName">'.$contas[$i]['name'].'<div class="memberClassification">'.$contas[$i]['occupation'].'</div></h3></div>';
+                        $x++;
+                    }
+                ?>
+            </div>
+        </div>
     </div>
     <!-- End members set -->
 
@@ -127,8 +164,17 @@
             <h2 class="page-header">O-T</h2>
         </div>
 
-        <div class="container"> </div>
-            <div class="row"> </div>  
+        <div class="container"> 
+            <div class="row"> 
+                <?php
+                    for ($i=$contasKN+1; $i <= $contasOT ; $i++) {
+                        
+                        echo '<!-- Start Member --><div id="effect-1" class="col-lg-4 col-sm-6 effects clearfix"><div class="img img-memberIcon img-circle img-responsive"><img class="memberIcon" src="../assets/images/ecomp/membros/'.$contas[$i]["login"].'.jpg" width=200 height=200 alt="" /><div class="overlay"><a href="#window'.$x.'" data-toggle="modal" class="expand pointsText">'.$contas[$i]['score'].' PONTOS</a></div></div><div class="modal fade" id="window'.$x.'" tabindex="-1" role="dialog" aria-labelledby="window'.$x.'" aria-hidden="true"><div class="modal-dialog modal-lg modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><img class="img img-responsive img-companyLogo" src="../assets/images/ecomp/logoNome.png" width="200" height="50"></img><h1 id="insideWidow" class="memberName text-right"><i class="fa fa-user-o" aria-hidden="true"></i>'.$contas[$i]['name'].'<div id="insideWidow" class="memberClassification text-right">'.$contas[$i]['occupation'].'</div></h1></div><div class="modal-body"><img class="img-memberWindow img img-rounded img-responsive" src="../assets/images/ecomp/membros/'.$contas[$i]["login"].'.jpg" alt=""></img><hr class="dark"><p class="text-center historicTitle">HISTÓRICO</p><hr class="dark"><div><p class="text-Window text-center"><span class="numberPunition">#1</span> <span class="topicPunition">PERDEU</span> <span class="numberPunition">XX</span> <span class="topicPunition">PONTOS EM XX/XX/XXXX POR XXXXXXXXXX<br><span class="responsiblePunition">RESPONSÁVEL:</span> XXXXXXXX</p><hr><p class="text-Window text-center"><span class="numberPunition">#2</span> <span class="topicPunition">PERDEU</span> <span class="numberPunition">XX</span> <span class="topicPunition">PONTOS EM XX/XX/XXXX POR XXXXXXXXXX<br><span class="responsiblePunition">RESPONSÁVEL:</span> XXXXXXXX</p><hr><p class="text-Window text-center"><span class="numberPunition">#3</span> <span class="topicPunition">PERDEU</span> <span class="numberPunition">XX</span> <span class="topicPunition">PONTOS EM XX/XX/XXXX POR XXXXXXXXXX<br><span class="responsiblePunition">RESPONSÁVEL:</span> XXXXXXXX</p><hr></div></div></div></div></div><h3 class="memberName">'.$contas[$i]['name'].'<div class="memberClassification">'.$contas[$i]['occupation'].'</div></h3></div>';
+                        $x++;
+                    }
+                ?>
+            </div> 
+        </div> 
     </div>
     <!-- End members set -->    
 
@@ -139,8 +185,17 @@
         <div class="col-lg-12">
             <h2 class="page-header">U-Z</h2>
         </div>
-    </div>
-    </div>
+        <div class="container"> 
+            <div class="row"> 
+                <?php
+                    for ($i=$contasOT+1; $i <= $contasUZ ; $i++) {
+                        
+                        echo '<!-- Start Member --><div id="effect-1" class="col-lg-4 col-sm-6 effects clearfix"><div class="img img-memberIcon img-circle img-responsive"><img class="memberIcon" src="../assets/images/ecomp/membros/'.$contas[$i]["login"].'.jpg" width=200 height=200 alt="" /><div class="overlay"><a href="#window'.$x.'" data-toggle="modal" class="expand pointsText">'.$contas[$i]['score'].' PONTOS</a></div></div><div class="modal fade" id="window'.$x.'" tabindex="-1" role="dialog" aria-labelledby="window'.$x.'" aria-hidden="true"><div class="modal-dialog modal-lg modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><img class="img img-responsive img-companyLogo" src="../assets/images/ecomp/logoNome.png" width="200" height="50"></img><h1 id="insideWidow" class="memberName text-right"><i class="fa fa-user-o" aria-hidden="true"></i>'.$contas[$i]['name'].'<div id="insideWidow" class="memberClassification text-right">'.$contas[$i]['occupation'].'</div></h1></div><div class="modal-body"><img class="img-memberWindow img img-rounded img-responsive" src="../assets/images/ecomp/membros/'.$contas[$i]["login"].'.jpg" alt=""></img><hr class="dark"><p class="text-center historicTitle">HISTÓRICO</p><hr class="dark"><div><p class="text-Window text-center"><span class="numberPunition">#1</span> <span class="topicPunition">PERDEU</span> <span class="numberPunition">XX</span> <span class="topicPunition">PONTOS EM XX/XX/XXXX POR XXXXXXXXXX<br><span class="responsiblePunition">RESPONSÁVEL:</span> XXXXXXXX</p><hr><p class="text-Window text-center"><span class="numberPunition">#2</span> <span class="topicPunition">PERDEU</span> <span class="numberPunition">XX</span> <span class="topicPunition">PONTOS EM XX/XX/XXXX POR XXXXXXXXXX<br><span class="responsiblePunition">RESPONSÁVEL:</span> XXXXXXXX</p><hr><p class="text-Window text-center"><span class="numberPunition">#3</span> <span class="topicPunition">PERDEU</span> <span class="numberPunition">XX</span> <span class="topicPunition">PONTOS EM XX/XX/XXXX POR XXXXXXXXXX<br><span class="responsiblePunition">RESPONSÁVEL:</span> XXXXXXXX</p><hr></div></div></div></div></div><h3 class="memberName">'.$contas[$i]['name'].'<div class="memberClassification">'.$contas[$i]['occupation'].'</div></h3></div>';
+                        $x++;
+                    }
+                ?>
+            </div>
+        </div>
     </div>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
