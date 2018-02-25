@@ -1,20 +1,20 @@
     function editId(id){
 
-        window.location= "http://localhost:8081/view/editarConta.php?editAdv="+id;
+        window.location= "http://localhost:8081/view/editarAdv.php?editAdv="+id;
     }
 
     function deleteId(id){
 
-    // $.ajax({
-    //     url: 'http://localhost:8081/routes/routes.php',
-    //     type: 'get',
-    //     data:{deletarConta: id},
-    //     success: function(){
-    //     alert("Conta deletada com sucesso!");
-    //         location.reload();
-    //     }
-    // });
-     window.location= "http://localhost:8081/routes/routes.php?delAdv="+id;
+      $.ajax({
+          url: 'http://localhost:8081/routes/routes.php',
+          type: 'get',
+          data:{delAdv: id},
+          success: function(){
+          alert("Advertencia deletada com sucesso!");
+              location.reload();
+          }
+      });
+      //window.location= "http://localhost:8081/routes/routes.php?delAdv="+id;
 
   
     }
