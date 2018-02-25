@@ -29,10 +29,10 @@
     $contasUZ = 0;
     $num = 0;
     for ($z=0; $z < sizeof($contas) ; $z++){
-        if(substr($contas[$z]["name"],0,1) == 'A' || substr($contas[$z]["name"],0,1) == 'B' || substr($contas[$z]["name"],0,1) == 'C' || substr($contas[$z]["name"],0,1) == 'D' || substr($contas[$z]["name"],0,1) == 'E' || substr($contas[$z]["name"],0,1) == 'F' || substr($contas[$z]["name"],0,1) == 'G'){
+        if(substr($contas[$z]["name"],0,1) == 'A' || substr($contas[$z]["name"],0,1) == 'B' || substr($contas[$z]["name"],0,1) == 'C' || substr($contas[$z]["name"],0,1) == 'D' || substr($contas[$z]["name"],0,1) == 'E' || substr($contas[$z]["name"],0,1) == 'F' || substr($contas[$z]["name"],0,1) == 'G' || substr($contas[$z]["name"],0,1) == 'H'){
             $contasAG++;
         }
-        elseif(substr($contas[$z]["name"],0,1) == 'K' || substr($contas[$z]["name"],0,1) == 'L' || substr($contas[$z]["name"],0,1) == 'M' || substr($contas[$z]["name"],0,1) == 'N'){     
+        elseif(substr($contas[$z]["name"],0,1) == 'I' || substr($contas[$z]["name"],0,1) == 'J' || substr($contas[$z]["name"],0,1) == 'K' || substr($contas[$z]["name"],0,1) == 'L' || substr($contas[$z]["name"],0,1) == 'M' || substr($contas[$z]["name"],0,1) == 'N'){     
             $contasKN= $z;
         }
         elseif(substr($contas[$z]["name"],0,1) == 'O' || substr($contas[$z]["name"],0,1) == 'P' || substr($contas[$z]["name"],0,1) == 'Q' || substr($contas[$z]["name"],0,1) == 'R' || substr($contas[$z]["name"],0,1) == 'S' || substr($contas[$z]["name"],0,1) == 'T'){     
@@ -91,11 +91,11 @@
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a class="page-scroll scrollSuave" href="#AG">A-G</a></li>
-                    <li><a class="page-scroll scrollSuave" href="#KN">K-N</a></li>
+                    <li><a class="page-scroll scrollSuave" href="#AH">A-H</a></li>
+                    <li><a class="page-scroll scrollSuave" href="#IN">I-N</a></li>
                     <li><a class="page-scroll scrollSuave" href="#OT">O-T</a></li>
                     <li><a class="page-scroll scrollSuave" href="#UZ">U-Z</a></li>
-                    <?php if($adm == true){echo '<li class="dropdown"><a class="dropdown-toggle page-scroll scrollSuave" data-toggle="dropdown" href="#">Gerenciar<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="painel.php">Advertências</a></li><li><a href="contas.php">Contas</a></li></ul></li>';}?>
+                    <?php if($adm == true){echo '<li class="dropdown"><a class="dropdown-toggle page-scroll scrollSuave" data-toggle="dropdown" href="#">Gerenciar<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="advertencias.php">Advertências</a></li><li><a href="contas.php">Contas</a></li></ul></li>';}?>
                     <?php if(isset($_SESSION['auth'])){echo '<li><button id="logout" class="btn btn-default navbar-btn page-scroll">Logout</button></li>';}?>
                    
                 </ul>
@@ -115,9 +115,9 @@
     </header>
 
     <!-- Members set -->
-    <div id='AG'>
+    <div id='AH'>
         <div class="col-lg-12">
-            <h2 class="page-header">A-G</h2>
+            <h2 class="page-header">A-H</h2>
         </div>
 
         <div class="container">
@@ -139,9 +139,9 @@
     
 
     <!-- Members set -->
-    <div id='KN'>
+    <div id='IN'>
         <div class="col-lg-12">
-            <h2 class="page-header">K-N</h2>
+            <h2 class="page-header">I-N</h2>
         </div>
 
         <div class="container">
