@@ -99,12 +99,6 @@
 										</select>
 									</div>
 								</div>
-								<!-- <div class="row">		
-									<div id="membro" class="col-md-12 form-group">
-									<label for="membro">Penalizado</label>
-										<input id="membro" class="form-control" type="text" name="membro">
-									</div>
-								</div> -->
 								<div class="row">
 									<div class="col-md-12 form-group">
 									<label for="resp">Responsável</label>

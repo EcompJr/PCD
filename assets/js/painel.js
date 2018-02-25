@@ -1,8 +1,3 @@
-function updatePoints() {
-    var x = document.getElementById("#qtdDias").value;
-    document.getElementById("#points").innerHTML = x;
-}
-
 $(document).ready(function(){
 
 
@@ -33,23 +28,11 @@ $(document).ready(function(){
 			$("#points").val("2");
 
 		}else if ($("#motivo option:selected").val() == "motivo3" ){
-			
-			//ESCONDER O INPUT QTD DIAS QUANDO ESCOLHER OUTRA OPCAO
-			
-			// if (!($("#qtdDias").is(":visible")) ){
-			// 	$("#motivo").append('<div class="row"><div class="input-field col s8"><input id="qtdDias" type="number" name="qtdDias" placeholder="Qtd dias" min="1" size="2"></div></div>');
-			// }else{
-			// 	$("#qtdDias").change(function() { 	
-			// 		$("#points").val($("#qtdDias").val()*2);
-			// 	});
-			// }
-			
+						
 			$("#qtdDias").removeAttr('disabled');
 			$("#qtdDias").change(function() { 	
 				$("#points").val($("#qtdDias").val()*2);
 			})
-
-
 
 		}else if ($("#motivo option:selected").val() == "motivo4" ){
 
@@ -78,21 +61,6 @@ $(document).ready(function(){
 			}
 		});
 	});
-
-// 	 $("#regras").click(function(){
-
-//         window.location= "http://localhost:8081/view/regras.php";
-//     });
-
-//     $("#advBTN").click(function(){
-
-//       window.location= "http://localhost:8081/view/advertencias.php";
-//   });
-
-//   $("#contasBTN").click(function(){
-
-//       window.location= "http://localhost:8080/view/gerenciarContas.php";
-//   });
 	 
 });
 
