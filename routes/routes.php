@@ -11,39 +11,28 @@ session_start();
 		
 		$login = $_POST['login'];
 		$senha = $_POST['password'];
-		//$codedSenha = md5($senha);
 		$codedSenha = sha1($senha);
 		unset($_POST['loginAttempt']);
 
 		$membrosController = new MembrosController();
 		$user = $membrosController->auth($login, $codedSenha);
-		
 		if ($user) {
 
             $_SESSION['auth']  = true;     
 			$_SESSION['cargo'] = $user['occupation'];
 			$_SESSION['nome'] = $user['name'];
 			$_SESSION['uid'] = $user['id'];
-			var_dump($user);
 
 			//coloquei pra checar se o usuario tem a palavra "Diretor no campo "occupation" do banco.
 			if (preg_match('/\Diretor\b/',$user['occupation'] )) {
 				header("location:../view/painel.php");			
 			}else{
-				header("location:../view/contas.php");
+				header("location:../view/pcd.php");
 			}
-
-			//if($user['privilegio']=="Diretor" || $user['cargo']=="Conselheiro"){
-				
-			// }else{
 			
-			// }
 		}else {
 			header("location:../view/login.php?valid=false");
 		}
-			
-			
-		
     }
     
     //Logout
@@ -70,7 +59,7 @@ session_start();
             $privilegio = '0';
         }
 
-        $codedSenha = md5($senha);
+        $codedSenha = sha1($senha);
         unset($_POST['register']);
 
         $membrosController = new MembrosController();
