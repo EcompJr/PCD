@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `pcd_db`
 --
-
+CREATE DATABASE `db_pcd`;
 -- --------------------------------------------------------
 
 --

@@ -26,8 +26,11 @@ session_start();
 			//coloquei pra checar se o usuario tem a palavra "Diretor no campo "occupation" do banco.
 			if (preg_match('/\Diretor\b/',$user['occupation'] )) {
 				header("location:../view/painel.php");			
-			}else{
-				header("location:../view/pcd.php");
+			}else if (preg_match('/\Conselheiro\b/',$user['occupation'] )){
+				header("location:../view/painel.php");
+			}			
+			else{
+				header("location:../view/login.php");
 			}
 			
 		}else {
