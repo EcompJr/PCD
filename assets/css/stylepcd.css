@@ -45,7 +45,8 @@
   border: 2px solid #333333; 
   float: left;
   margin-bottom: 100%;
-  width: 296px;
+  object-fit: cover;
+  width: 30%;
   height: 400px;
 }
 
