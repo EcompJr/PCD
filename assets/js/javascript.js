@@ -132,6 +132,27 @@ $(document).ready(function () {
         $(this).removeClass("hover");
     });
 
+    var contasAH = "";    
+    $.ajax({
+		url: '../routes/routes.php',
+        type: 'post',
+        dataType: "json",
+        data: {loadContas: 'contas'},
+        success: function(membros) {
+            //Laço para criar linhas da tabela Advertencias
+            var x = 1;
+            for(var i = 0; i<membros.length; i++){
+                contasAH += "<!-- Start Member --><div id=\"effect-1\" class=\"col-lg-4 col-sm-6 effects clearfix\"><div class=\"img img-memberIcon img-circle img-responsive\"><img class=\"memberIcon\" src=\"../assets/images/ecomp/membros/"+membros[i].login+".jpg\" width=\"200\" height=\"200\" alt=\"\"/>";
+                contasAH += "<div class=\"overlay\"><a href=\"#window"+x+"\" data-toggle=\"modal\" class=\"expand pointsText\">"+membros[i].score+" PONTOS</a></div></div><div class=\"modal fade\" id=\"window"+x+"\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"window"+x+"\" aria-hidden=\"true\"><div class=\"modal-dialog modal-lg modal-lg\"><div class=\"modal-content\"><div class=\"modal-header\"><button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button><img class=\"img img-responsive img-companyLogo\" src=\"../assets/images/ecomp/logoNome.png\" width=\"200\" height=\"50\"></img><h1 id=\"insideWidow\" class=\"memberName text-right\"><i class=\"fa fa-user-o\" aria-hidden=\"true\"></i> "+membros[i].name+"<div id=\"insideWidow\" class=\"memberClassification text-right\">"+membros[i].occupation+"</div></h1></div><div class=\"modal-body\"><img class=\"img-memberWindow img img-rounded img-responsive\" src=\"../assets/images/ecomp/membros/"+membros[i].login+".jpg\" alt=\"\"></img><hr class=\"dark\">";
+                contasAH += "<p class=\"text-center historicTitle\">HISTÓRICO</p><hr class=\"dark\"><div><p class=\"text-Window text-center\"><span class=\"numberPunition\">#1</span> <span class=\"topicPunition\">PERDEU</span> <span class=\"numberPunition\">XX</span> <span class=\"topicPunition\">PONTOS EM XX/XX/XXXX POR XXXXXXXXXX<br><span class=\"responsiblePunition\">RESPONSÁVEL:</span> XXXXXXXX</p><hr><p class=\"text-Window text-center\"><span class=\"numberPunition\">#2</span> <span class=\"topicPunition\">PERDEU</span> <span class=\"numberPunition\">XX</span> <span class=\"topicPunition\">PONTOS EM XX/XX/XXXX POR XXXXXXXXXX<br><span class=\"responsiblePunition\">RESPONSÁVEL:</span> XXXXXXXX</p><hr><p class=\"text-Window text-center\"><span class=\"numberPunition\">#3</span> <span class=\"topicPunition\">PERDEU</span> <span class=\"numberPunition\">XX</span> <span class=\"topicPunition\">PONTOS EM XX/XX/XXXX POR XXXXXXXXXX<br><span class=\"responsiblePunition\">RESPONSÁVEL:</span> XXXXXXXX</p><hr></div></div></div></div></div>";
+                contasAH += "<h3 class=\"memberName\">"+membros[i].name+"<div class=\"memberClassification\">"+membros[i].occupation+"</div></h3></div>";
+                x++;
+            }
+            //Preencher a div
+            $("#rowAH").html(contasAH);
+        }    
+	});
+
     //Logout
 	$("#logout").click(function(){
 			
