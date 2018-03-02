@@ -1,21 +1,20 @@
 <?php
     session_start();
     require_once("../controller/AdvertenciasController.class.php");
-    if (!isset($_SESSION['auth'])) {
-		header("location:../view/login.php?valid=false");			
-	}
-    $adm = null;
-    //Verica o cargo do usuario, para exibir botao de gerenciar na navbar
-    //caso este seja administrador
-    if(isset($_SESSION['cargo'])){
-        if($_SESSION['cargo']=="Diretor" || $_SESSION['cargo']=="Conselheiro"){
-            $adm = true;
-        }else{   
-            header("location:../view/login.php?adm=false");	
-        }
-    }
-    $advController = new AdvertenciasController();
-	$adv = $advController->getAdvertenciasDB();
+    // if (!isset($_SESSION['auth'])) {
+	// 	header("location:../view/login.php?valid=false");			
+	// }
+    // $adm = null;
+    // //Verica o cargo do usuario, para exibir botao de gerenciar na navbar
+    // //caso este seja administrador
+    // if(isset($_SESSION['cargo'])){
+    //     if($_SESSION['cargo']=="Diretor" || $_SESSION['cargo']=="Conselheiro"){
+    //         $adm = true;
+    //     }else{   
+    //         header("location:../view/login.php?adm=false");	
+    //     }
+    // }
+
 ?>
 
 <!DOCTYPE html>
@@ -52,7 +51,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12">
-                        <table class="table table-hover">
+                        <table id="tabelaAdvertencias" class="table table-hover">
                             <thead>
                                 <tr>
                                     <th>Membro</th>
@@ -61,28 +60,11 @@
                                     <th>Data</th>
                                     <th>Pontos</th>
                                     <th>Indeferida</th>
-
                                     <th></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php 
-                                    for ($i=0; $i < sizeof($adv) ; $i++) {
-                                        $id = $adv[$i]['id'];
-                                        echo "<tr>";
-                                        echo "<td>".$adv[$i]['member']."</td>";
-                                        echo "<td>".$adv[$i]['responsible']."</td>";
-                                        echo "<td>".$adv[$i]['reason']."</td>";
-                                        echo "<td>".$adv[$i]['data']."</td>";
-                                        echo "<td>".$adv[$i]['points']."</td>";
-                                        echo "<td>".$adv[$i]['dismissed']."</td>";
-
-
-                                        echo "<td><button id='btnEdit' type=\"button\"  class=\"botaoE btn-primary\" style=\"margin-right: 10px;\" onclick=\"editId($id)\"><span class=\"glyphicon glyphicon-edit\" aria-hidden=\"true\"></span></button><button id='btnDelete' type=\"button\"  class=\"botaoD btn-danger\" onclick=\"deleteId($id)\"><span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span></button></td>";
-                                        echo "</tr>";	
-                                                        
-                                    }
-                                ?>                                
+                                <!-- Preenchido por js  -->
                             </tbody>
                         </table>
 					</div>
@@ -104,11 +86,6 @@ crossorigin="anonymous"></script>
 <!-- Datepicker imports -->
 <script type="text/javascript" src="../assets/js/bootstrap-datepicker.min.js"></script>
 <script type="text/javascript"src="../assets/js/bootstrap-datepicker.pt-BR.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $(".table").DataTable();
-    });
-</script>
 </body>
 </html>
 

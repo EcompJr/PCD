@@ -1,6 +1,22 @@
 $(document).ready(function(){
 
-
+	var selectPenalizado = "";    
+    $.ajax({
+		url: '../routes/routes.php',
+        type: 'post',
+        dataType: "json",
+        data: {loadContas: 'contas'},
+        success: function(membros) {
+			selectPenalizado += "<option value='' disabled selected>Escolha um membro</option>";
+            //Laço para criar linhas da tabela Advertencias
+            for(var i = 0; i<membros.length; i++){
+				selectPenalizado += "<option value="+membros[i].id+">"+membros[i].name+"</option>";
+            }
+            //Preencher a Tabela
+            $("#selectMembros").html(selectPenalizado);
+        }    
+	});
+	
     $('#inpDate').datepicker({
         format: 'dd/mm/yyyy',
         language:"pt-BR",
@@ -52,12 +68,12 @@ $(document).ready(function(){
 	$("#logout").click(function(){
 			
 		$.ajax({
-			url: 'http://localhost:8081/routes/routes.php',
+			url: '../routes/routes.php',
 			type: 'get',
 			data:{action:'logoff'},
 			success: function(){
 				alert("Deslogado com sucesso!");
-				window.location= "http://localhost:8081/view/login.php?logout=true";
+				window.location= "../view/login.php?logout=true";
 			}
 		});
 	});

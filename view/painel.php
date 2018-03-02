@@ -15,8 +15,6 @@
     //         header("location:../view/profile.php?adm=false");
     //     }
     // }
-    $membrosController = new MembrosController();
-	$contas = $membrosController->getContas();
 ?>
 
 <!DOCTYPE html>
@@ -89,13 +87,8 @@
 								<div class="row">		
 									<div id="membro" class="col-md-12 form-group">
 									<label for="membro">Penalizado</label>
-										<select required id="membro" class="form-control" type="text" name="selectPenalizado">
-											<option value="" disabled selected>Escolha um membro</option>
-											<?php
-												for ($i=0; $i < sizeof($contas) ; $i++) {
-													echo "<option value=".$contas[$i]['id'].">".$contas[$i]['name']."</option>";
-												}
-											?>
+										<select required id="selectMembros" class="form-control" type="text" name="selectPenalizado">
+												<!-- Preenchido por js  -->
 										</select>
 									</div>
 								</div>

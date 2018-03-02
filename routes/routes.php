@@ -42,7 +42,7 @@ session_start();
         unset($_GET['action']);
         // header("location:../view/login.php");
         session_destroy();     
-    }
+	}
 
 	//Cadastro
 	if(isset($_POST['register'])){
@@ -69,7 +69,37 @@ session_start();
         }else{
             header("location:../view/cadastro.php?cad=false");
         }
-    }
+	}
+	//Delete Account
+	if(isset($_GET['delAcc'])){
+	
+        $membrosController = new MembrosController();
+		$del = $membrosController->deletarConta($_GET['delAcc']);	
+		//nao funcionou a verificacao, mas a funcao sim
+		if($del > '0'){
+			header("location:../view/advertencias.php?delete=true");
+		}else{
+			header("location:../view/advertencias.php?delete=false");
+		}
+	}
+
+	//Carregar Contas
+    if (isset($_POST['loadContas']) && $_POST['loadContas'] == "contas") {
+
+		unset($_POST['loadContas']);
+		$membrosController = new MembrosController();
+		$contas = $membrosController->getContas();
+		echo json_encode($contas);  
+	}
+
+	//Carregar Advertencias
+	if (isset($_POST['loadAdvs']) && $_POST['loadAdvs'] == "advertences") {
+
+		unset($_POST['loadAdvs']);
+		$advController = new AdvertenciasController();
+		$advertencias = $advController->getAdvertenciasDB();
+		echo json_encode($advertencias);  
+	}
 
     //Adicionar advertencia
 	if(isset($_POST['addAdvertence'])){

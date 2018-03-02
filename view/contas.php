@@ -15,8 +15,6 @@
             $adm = false;   
         }
     }
-    $membrosController = new MembrosController();
-	$contas = $membrosController->getContas();
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +51,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12">
-                        <table class="table table-hover">
+                        <table id="tabelaContas" class="table table-hover">
                             <thead>
                                 <tr>
                                     <th>Login</th>
@@ -63,19 +61,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php 
-                                    for ($i=0; $i < sizeof($contas) ; $i++) {
-                                        $id = $contas[$i]['id'];
-                                        echo "<tr>";
-                                        echo "<td>".$contas[$i]['login']."</td>";
-                                        echo "<td>".$contas[$i]['name']."</td>";
-                                        echo "<td>".$contas[$i]['occupation']."</td>";
-                                        
-                                        echo "<td><button id='btnEdit' type=\"button\"  class=\"botaoE btn-primary\" style=\"margin-right: 10px;\" onclick=\"editId($id)\"><span class=\"glyphicon glyphicon-edit\" aria-hidden=\"true\"></span></button><button id='btnDelete' type=\"button\"  class=\"botaoD btn-danger\" onclick=\"deleteId($id)\"><span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span></button></td>";
-                                        echo "</tr>";	
-                                                        
-                                    }
-                                ?>
+                                <!-- Preenchido por js  -->
                             </tbody>
                         </table>
 					</div>
@@ -87,7 +73,7 @@
 </div>
 <script type="text/javascript" src="../assets/js/jquery-3.2.1.js"></script>
 <!-- <script src="../assets/js/javascript.js"></script> -->
-<script type="text/javascript" src="../assets/js/painel.js"></script>
+<script type="text/javascript" src="../assets/js/contas.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 crossorigin="anonymous"></script>
 <!-- DataTable imports -->
@@ -98,11 +84,6 @@ crossorigin="anonymous"></script>
 <script type="text/javascript" src="../assets/js/bootstrap-datepicker.min.js"></script>
 <script type="text/javascript" src="../assets/js/bootstrap-datepicker.pt-BR.min.js"></script>
 
-<script type="text/javascript">
-    $(document).ready(function(){
-        $(".table").DataTable();
-    });
-</script>
 </body>
 </html>
 
