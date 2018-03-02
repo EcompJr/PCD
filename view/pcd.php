@@ -15,11 +15,14 @@
     $adm = null;
     if(isset($_SESSION['cargo'])){
         if($_SESSION['cargo']=="Diretor" || $_SESSION['cargo']=="Conselheiro"){
-            $adm = true;            
+            $adm = true;
+            echo $_SESSION['cargo'];           
         }else{
             $adm = false;       
+            echo $_SESSION['cargo'];
         }
     }
+
 
     $membrosController = new MembrosController();
     $contas = $membrosController->getContas();

@@ -39,9 +39,11 @@
                         <a class="page-scroll scrollSuave" href="#rules">Regras</a>
                     </li>
                     <li>
-                        <a class="page-scroll scrollSuave" href="/Views/pcd.php">Membros</a>
+                        <a class="page-scroll scrollSuave" href="/view/pcd.php">Membros</a>
                     </li>
-
+                    <li>
+                        <a class="page-scroll scrollSuave" href="/view/login.php">Login</a>
+                    </li>
 
                 </ul>
             </div>
