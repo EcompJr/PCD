@@ -28,8 +28,9 @@ session_start();
 				header("location:../view/painel.php");			
 			}else if (preg_match('/\Conselheiro\b/',$user['occupation'] )){
 				header("location:../view/painel.php");
-			}			
-			else{
+			}else if(preg_match('/\Trainee\b/',$user['occupation'] )){
+				header("location:../view/painel.php");
+			}else{
 				header("location:../view/login.php");
 			}
 			
