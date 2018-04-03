@@ -70,6 +70,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 id = "message2" class ="title"></h2>
+                    <h2 style="color:white;"> Sobre o nosso Programa de Controle Disciplinar </h2>
                     <hr class="light">
                     <br>
                     <p class="text-faded">O programa de controle disciplinar tem o objetivo de alertar e fiscalizar comportamentos que de certa
