@@ -38,7 +38,8 @@
 </head>
 <body>
 	<?php
-		require_once 'navbarAdm.php';
+        require_once 'navbarAdm.php';
+        require_once '../controller/MembrosController.class.php';
 	?>
 	<div class="container-fluid">
 	<div class="row">
@@ -47,50 +48,67 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12">
-						<form id="cad" action="../routes/routes.php" method="POST" name="formCad">
+
+                        <?php
+                            $idAdv = $_GET['editAccount'];
+                            $conta = MembrosController::getContaById($idAdv);
+
+                            $login = $conta['login'];
+                            $password = $conta['password'];
+                            $name = $conta['name'];
+                            $occupation = $conta['occupation'];
+
+                        var_dump($conta);
+                        
+                        if($login == NULL)
+                            echo "aaa";
+
+						echo "<form id='cad' action='../routes/routes.php' method='POST' name='formCad'>
 							
-							<div class="row">
-								<div class="col-md-12 form-group" id="cargo">
-								<label for="idMotivo">Cargo</label>
-									<select required id="selectCargo" class="form-control" name="selectCargo">
-										<option value="" disabled selected>Escolha uma das opções</option>	
-										<option value="Conselheiro">Conselheiro</option>
-										<option value="Diretor">Diretor</option>
-										<option value="Membro">Membro</option>
-										<option value="Trainee">Trainee</option>
+							<div class='row'>
+								<div class='col-md-12 form-group' id='cargo'>
+								<label for='idMotivo'>Cargo</label>
+									<select required id='selectCargo' class='form-control' name='selectCargo'>
+										<option value='' disabled selected>Escolha uma das opções</option>	
+										<option value='Conselheiro'>Conselheiro</option>
+										<option value='Diretor'>Diretor</option>
+										<option value='Membro'>Membro</option>
+										<option value='Trainee'>Trainee</option>
 									</select>
 									
 								</div>
 							</div>
 
-							<div class="row">		
-								<div id="nome" class="col-md-12 form-group">
-								<label for="nome">Nome</label>
-									<input id="nome" class="form-control" type="text" name="nomeCad">
+							<div class='row'>		
+								<div id='nome' class='col-md-12 form-group'>
+								<label for='nome'>Nome</label>
+									<input id='nome' class='form-control' type='text' name='nomeCad' value='$name'>
 								</div>
 							</div>
 
-							<div class="row">		
-								<div id="login" class="col-md-12 form-group">
-								<label for="login">Login</label>
-									<input id="login" class="form-control" type="text" name="loginCad">
+							<div class='row'>		
+								<div id='login' class='col-md-12 form-group'>
+								<label for='login'>Login</label>
+									<input id='login' class='form-control' type='text' name='loginCad' value='$login>
 								</div>
 							</div>
 
-							<div class="row">		
-								<div id="senha" class="col-md-12 form-group">
-								<label for="senha">Senha</label>
-									<input id="senha" class="form-control" type="password" name="senhaCad">
+							<div class='row'>		
+								<div id='senha' class='col-md-12 form-group'>
+								<label for='senha'>Senha</label>
+									<input id='senha' class='form-control' type='password' name='senhaCad' value='$password>
 								</div>
 							</div>
 							
 							
-							<div class="row">
-								<div class="col-md-3 form-group">
-									<button id="registerBTN" type="submit" class="btn btn-primary"  name="register">Submit <i class="fa fa-send"></i></button>
+							<div class='row'>
+								<div class='col-md-3 form-group'>
+									<button id='registerBTN' type='submit' class='btn btn-primary'  name='register'>Submit <i class='fa fa-send'></i></button>
 								</div>		
 							</div>
-						</form>
+                        </form>";
+                        ?>
+
 					</div>
 				</div>
 			</div>
