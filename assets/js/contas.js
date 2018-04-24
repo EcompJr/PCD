@@ -1,6 +1,6 @@
 function editId(id){
 
-    window.location= "http://localhost:8081/view/editarAdv.php?editAccount="+id;
+    window.location= "http://localhost:8080/view/editarAdv.php?editAccount="+id;
 }
 
 function deleteId(id){

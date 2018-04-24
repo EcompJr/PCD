@@ -1,12 +1,12 @@
 function editId(id){
 
-    window.location= "http://localhost:8081/view/editarAdv.php?editAdv="+id;
+    window.location= "editarAdv.php?editAdv="+id;
 }
 
 function deleteId(id){
 
     $.ajax({
-        url: 'http://localhost:8081/routes/routes.php',
+        url: 'http://localhost:8080/routes/routes.php',
         type: 'get',
         data:{delAdv: id},
         success: function(){

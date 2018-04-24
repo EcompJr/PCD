@@ -28,14 +28,13 @@ session_start();
 				header("location:../view/painel.php");			
 			}else if (preg_match('/\Conselheiro\b/',$user['occupation'] )){
 				header("location:../view/painel.php");
-			}else if(preg_match('/\Trainee\b/',$user['occupation'] )){
-				header("location:../view/painel.php");
 			}else{
-				header("location:../view/login.php");
+				header("location:../view/painel.php");
 			}
 			
 		}else {
 			header("location:../view/login.php?valid=false");
+	
 		}
     }
     
@@ -102,6 +101,15 @@ session_start();
 		unset($_POST['loadAdvs']);
 		$advController = new AdvertenciasController();
 		$advertencias = $advController->getAdvertenciasDB();
+		echo json_encode($advertencias);  
+	}
+
+	//Carregar uma advertencia específica
+	if (isset($_POST['editAdv']) && $_POST['loadOneAdv'] == "advertences") {
+
+		unset($_POST['loadOneAdv']);
+		$advController = new AdvertenciasController();
+		$advertencias = $advController->getAdvertenciasById();
 		echo json_encode($advertencias);  
 	}
 

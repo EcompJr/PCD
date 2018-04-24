@@ -23,6 +23,15 @@
 			return $advertencias;
 		}
 
+		function searchForWarning($id){
+            //conectar ao banco, criar a query, receber as linhas,  retornar a lista.
+            $conn = Connection::getInstance();
+            $query = "SELECT * FROM advertences WHERE id = \"$id\" ";
+            $sql = $conn->query($query);
+            $warning = $sql->fetch(PDO::FETCH_ASSOC);
+            return $warning;
+        }    
+
 		//Funcao que retorna as advertencias referentes ao id passado
 		public function getAdvertenciasById($id){
 
