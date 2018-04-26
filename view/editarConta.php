@@ -50,21 +50,24 @@
 					<div class="col-md-12">
 
                         <?php
-                            $idAdv = $_GET['editAccount'];
-                            $conta = MembrosController::getContaById($idAdv);
+                            $idAcc = $_GET['editAccount'];
+                            $conta = MembrosController::getContaById($idAcc);
+                            $login = $conta['0']['login'];
+                            $password = $conta['0']['password'];
+                            $name = $conta['0']['name'];
+                            $occupation = $conta['0']['occupation'];
 
-                            $login = $conta['login'];
-                            $password = $conta['password'];
-                            $name = $conta['name'];
-                            $occupation = $conta['occupation'];
-
-                        var_dump($conta);
                         
-                        if($login == NULL)
-                            echo "aaa";
-
 						echo "<form id='cad' action='../routes/routes.php' method='POST' name='formCad'>
 							
+						<div class='row'>		
+						<div id='nome' class='col-md-12 form-group'>
+						<label for='nome'>Nome</label>
+							<input id='Id' class='form-control' type='hidden' name='Id' value='$idAcc'>
+						</div>
+					</div>
+
+
 							<div class='row'>
 								<div class='col-md-12 form-group' id='cargo'>
 								<label for='idMotivo'>Cargo</label>
@@ -89,7 +92,7 @@
 							<div class='row'>		
 								<div id='login' class='col-md-12 form-group'>
 								<label for='login'>Login</label>
-									<input id='login' class='form-control' type='text' name='loginCad' value='$login>
+									<input id='login' class='form-control' type='text' name='loginCad' value='$login'>
 								</div>
 							</div>
 
@@ -103,7 +106,7 @@
 							
 							<div class='row'>
 								<div class='col-md-3 form-group'>
-									<button id='registerBTN' type='submit' class='btn btn-primary'  name='register'>Submit <i class='fa fa-send'></i></button>
+									<button id='registerBTN' type='submit' class='btn btn-primary'  name='editConta'>Submit <i class='fa fa-send'></i></button>
 								</div>		
 							</div>
                         </form>";

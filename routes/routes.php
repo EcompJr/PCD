@@ -68,11 +68,41 @@ session_start();
         $membrosController = new MembrosController();
         $cad = $membrosController->cadastrarContas($login, $codedSenha, $nome, $cargo, $privilegio);
         if($cad){
-            header("location:../view/cadastro.php?cad=true");
+            header("location:../view/contas.php?cad=true");
         }else{
-            header("location:../view/cadastro.php?cad=false");
+            header("location:../view/contas.php?cad=false");
         }
 	}
+
+	//Editar Conta
+	if(isset($_POST['editConta'])){
+        
+        $login = $_POST['loginCad'];
+        $senha = $_POST['senhaCad'];
+        $nome = $_POST['nomeCad'];
+		$cargo = $_POST['selectCargo'];
+		$id = $_POST['Id'];
+        
+        $privilegio = null;
+        if($cargo=="Conselheiro" || $cargo=="Diretor"){
+            $privilegio = '1';
+        }else {
+            $privilegio = '0';
+        }
+
+        $codedSenha = sha1($senha);
+        unset($_POST['register']);
+
+        $membrosController = new MembrosController();
+        $c = $membrosController->editarConta($id, $login, $codedSenha, $nome, $cargo, $privilegio);
+        if($c){
+            header("location:../view/contas.php?cad=true");
+        }else{
+            header("location:../view/contas.php?cad=false");
+        }
+	}
+
+	
 	//Delete Account
 	if(isset($_GET['delAcc'])){
 	
