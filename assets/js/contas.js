@@ -6,7 +6,7 @@ function editId(id){
 function deleteId(id){
 
   $.ajax({
-      url: 'http://localhost:8081/routes/routes.php',
+      url: 'http://localhost:8080/routes/routes.php',
       type: 'get',
       data:{delAcc: id},
       success: function(){
