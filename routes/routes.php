@@ -27,9 +27,9 @@ session_start();
 			if (preg_match('/\Diretor\b/',$user['occupation'] )) {
 				header("location:../view/painel.php");			
 			}else if (preg_match('/\Conselheiro\b/',$user['occupation'] )){
-				header("location:../view/painel.php");
+				header("location:../view/perfil.php?id=".$user['id']);
 			}else{
-				header("location:../view/painel.php");
+				header("location:../view/perfil.php?id=".$user['id']);
 			}
 			
 		}else {
@@ -134,13 +134,24 @@ session_start();
 		echo json_encode($advertencias);  
 	}
 
-	//Carregar uma advertencia específica
-	if (isset($_POST['editAdv']) && $_POST['loadOneAdv'] == "advertences") {
+	//Editar uma advertencia específica
+	if (isset($_POST['editAdvertence'])) {
+		
+		$idAdv = $_POST['idAdv'];
+		$motivo = $_POST['motivo'];
+        $qtdDias= $_POST['qtdDias'];
+        $pontos = $_POST['points'];
+		$membro = $_POST['membro'];
+		$responsavel = $_POST['resp'];
+		$indeferida = $_POST['idIndef'];
 
-		unset($_POST['loadOneAdv']);
-		$advController = new AdvertenciasController();
-		$advertencias = $advController->getAdvertenciasById();
-		echo json_encode($advertencias);  
+        $advsController = new AdvertenciasController();
+        $a = $advsController->editarAdvertencia($membro, $motivo, $data, $pontos, $responsavel, $indeferida, $idAdv);
+        if($a){
+            header("location:../view/advertencias.php?cad=true");
+        }else{
+            header("location:../view/advertencias.php?cad=false");
+        }
 	}
 
     //Adicionar advertencia

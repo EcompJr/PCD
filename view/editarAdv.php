@@ -55,6 +55,13 @@
                            
                             echo "<form id='advert' action='../routes/routes.php' method='POST' name='formAdv'>
 								
+							
+							<div class='row'>
+							<div class='col-md-12 form-group'>
+								<input id='IdAdv' class='form-control' type='hidden' name='idAdv' value='$idAdv'>
+							</div>
+							</div>
+
 								<div class='row'>
 									<div class='col-md-12 form-group' id='motivo'>
 									<label for='idMotivo'>Motivo</label>
@@ -124,7 +131,7 @@
 								</div>
 								<div class='row'>
 									<div class='col-md-3 form-group'>
-										<button id='envAdv' type='submit' class='btn btn-primary'  name='addAdvertence'>Submit <i class='fa fa-send'></i></button>
+										<button id='envAdv' type='submit' class='btn btn-primary'  name='editAdvertence'>Submit <i class='fa fa-send'></i></button>
 									</div>		
 								</div>
                             </form>";
