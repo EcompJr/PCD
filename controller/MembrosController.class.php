@@ -87,5 +87,16 @@
 			
 			return $sql;
 		}
+
+		//Funcao que atualiza informacoes da conta
+		public function resetSenhas($codedSenha){
+
+			$conn = Connection::getInstance();
+			$query = "UPDATE usuarios SET password=\"$codedSenha\";";
+			$sql = $conn->query($query);
+			
+			return $sql;
+		}
+
 	}
 ?>

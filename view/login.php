@@ -72,6 +72,7 @@
                     </div>
                     
                     <button type="submit" class="btn btn-primary" name="loginAttempt" id="loginAttempt" >Entrar</button>
+                    <button type="submit" class="btn btn-primary" name="resetAttempt" id="resetAttempt" >Reset</button>
                 
                 </form>
             </div>

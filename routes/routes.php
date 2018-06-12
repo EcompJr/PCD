@@ -6,7 +6,18 @@ require_once "../controller/AdvertenciasController.class.php" ;
 
 session_start();
 
-    //Login
+	if(isset($_POST['resetAttempt'])){
+		$senha = "12345";
+		$codedSenha = sha1($senha);
+		$membrosController = new MembrosController();
+		$done = $membrosController->resetSenhas($codedSenha);
+		if($done){
+			header("location:../view/login.php?reset=1");
+		}
+		header("location:../view/login.php?reset=1");	
+	}
+
+    //Login	
 	if (isset($_POST['loginAttempt'])){
 		
 		$login = $_POST['login'];
@@ -33,6 +44,7 @@ session_start();
 			}
 			
 		}else {
+			//var_dump($user);
 			header("location:../view/login.php?valid=false");
 	
 		}
