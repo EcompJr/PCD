@@ -124,7 +124,7 @@
                   </table>
                   
                   <a href='#' class='btn btn-primary'>Meus Projetos</a>
-                  <a href='#' class='btn btn-primary'>Minhas Advertências</a>
+                  <a href='minhasAdvertencias.php?id=".$id."' class='btn btn-primary'>Minhas Advertências</a>
                 </div>
               </div>
             </div>";
