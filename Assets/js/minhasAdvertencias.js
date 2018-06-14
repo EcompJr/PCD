@@ -17,7 +17,9 @@ function deleteId(id){
 }
 $(document).ready(function () {
 
-    var tableAdvertences = "";    
+    var tableAdvertences = "";
+    var userId = document.getElementById("memberId").value;
+
     $.ajax({
         url: '../routes/routes.php',
         type: 'post',
@@ -27,7 +29,7 @@ $(document).ready(function () {
 
             //Laço para criar linhas da tabela Advertencias
             for(var i = 0; i<advertences.length; i++){
-                //if(advertences[i].member == nome){
+                if(advertences[i].memberId == userId){
                     tableAdvertences += "<tr>";
                     tableAdvertences += "<td>" + advertences[i].member + "</td>";
                     tableAdvertences += "<td>" + advertences[i].responsible + "</td>";
@@ -37,7 +39,8 @@ $(document).ready(function () {
                     tableAdvertences += "<td>" + advertences[i].dismissed + "</td>";
                     tableAdvertences += "<td><button id='btnEdit' type=\"button\"  class=\"botaoE btn-primary\" style=\"margin-right: 10px;\" onclick=\"editId("+advertences[i].id+")\"><span class=\"glyphicon glyphicon-edit\" aria-hidden=\"true\"></span></button><button id='btnDelete' type=\"button\"  class=\"botaoD btn-danger\" onclick=\"deleteId("+advertences[i].id+")\"><span class=\"glyphicon glyphicon-trash\" aria-hidden=\"true\"></span></button></td>";
                     tableAdvertences += "</tr>";
-                //}
+                }
+                //tableAdvertences += userId;
             }
             //Preencher a Tabela
             $("#tabelaAdvertencias tbody").html(tableAdvertences);

@@ -44,13 +44,23 @@
 		<div id="divConteudo" class="container col-md-offset-2 col-md-8">
             <div class="row">
                 <div class="table-head">
-                    <h4 class="text-justify">Gerenciar Advertências</h4>          
-                    <button class="btn btn-primary" onclick="location.href='painel.php';">Cadastrar</button>
+                    <h4 class="text-justify">Minhas Advertências</h4>          
+                    <?php
+                    $x = $_GET['id'];
+                    echo "<a href='perfil.php?id=".$x."' class=''>Voltar</a>"
+                    //echo "<a href='perfil.php?id=".$x."' class='btn btn-primary'>Voltar</a>"
+                    ?>
                 </div>
             </div>
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12">
+
+                        <?php
+                            $id = $_GET['id'];
+                            echo "<input type='hidden' id='memberId' name='id' value='".$id."'>";
+                        ?>
+
                         <table id="tabelaAdvertencias" class="table table-hover">
                             <thead>
                                 <tr>
@@ -76,8 +86,8 @@
 </div>
 
 <script type="text/javascript" src="../assets/js/jquery-3.2.1.js"></script>
-<!-- <script src="../assets/js/javascript.js"></script> -->
-<script type="text/javascript" src="../assets/js/advertencias.js"></script>
+
+<script type="text/javascript" src="../assets/js/minhasAdvertencias.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 crossorigin="anonymous"></script>
 <!-- DataTable imports -->
