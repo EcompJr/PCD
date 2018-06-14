@@ -21,7 +21,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Cadastro PCD</title>
+	<title>Editar Conta - PCD</title>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -56,60 +56,96 @@
                             $password = $conta['0']['password'];
                             $name = $conta['0']['name'];
                             $occupation = $conta['0']['occupation'];
+							$endereco = $conta['0']['address'];
+							$genero = $conta['0']['gender'];
+							$email = $conta['0']['email'];
+							$telefone = $conta['0']['phone'];
+							$github = $conta['0']['github'];
+							$aniversario = $conta['0']['birthday'];
+							$foto = $conta['0']['photo'];
 
-                        
 						echo "<form id='cad' action='../routes/routes.php' method='POST' name='formCad'>
 							
-						<div class='row'>		
+						<div class='row'>
+
 						<div id='nome' class='col-md-12 form-group'>
-						<label for='nome'>Nome</label>
 							<input id='Id' class='form-control' type='hidden' name='Id' value='$idAcc'>
 						</div>
-					</div>
 
-
-							<div class='row'>
-								<div class='col-md-12 form-group' id='cargo'>
-								<label for='idMotivo'>Cargo</label>
-									<select required id='selectCargo' class='form-control' name='selectCargo'>
-										<option value='' disabled selected>Escolha uma das opções</option>	
-										<option value='Conselheiro'>Conselheiro</option>
-										<option value='Diretor'>Diretor</option>
-										<option value='Membro'>Membro</option>
-										<option value='Trainee'>Trainee</option>
-									</select>
-									
-								</div>
-							</div>
-
-							<div class='row'>		
-								<div id='nome' class='col-md-12 form-group'>
-								<label for='nome'>Nome</label>
-									<input id='nome' class='form-control' type='text' name='nomeCad' value='$name'>
-								</div>
-							</div>
-
-							<div class='row'>		
-								<div id='login' class='col-md-12 form-group'>
-								<label for='login'>Login</label>
-									<input id='login' class='form-control' type='text' name='loginCad' value='$login'>
-								</div>
-							</div>
-
-							<div class='row'>		
-								<div id='senha' class='col-md-12 form-group'>
-								<label for='senha'>Senha</label>
-									<input id='senha' class='form-control' type='password' name='senhaCad' value='$password>
-								</div>
-							</div>
+						<div id='nome' class='col-md-12 form-group'>
+						<label for='nome'>Nome</label>
+							<input id='nome' class='form-control' type='text' name='nomeCad' value='$name'>
+						</div>
+						
+						<div class='col-md-12 form-group' id='cargo'>
+							<label for='idMotivo'>Cargo</label>
+								<select required id='selectCargo' class='form-control' name='selectCargo'>
+									<option value='' disabled selected>".$occupation."</option>	
+									<option value='Conselheiro'>Conselheiro</option>
+									<option value='Diretor'>Diretor</option>
+									<option value='Membro'>Membro</option>
+									<option value='Trainee'>Trainee</option>
+								</select>
+						</div>
 							
+
+
+						<div id='login' class='col-md-12 form-group'>
+							<label for='login'>Login</label>
+								<input id='login' class='form-control' type='text' name='loginCad' value='$login'>
+						</div>
+						
+
+						<div id='senha' class='col-md-12 form-group'>
+							<label for='senha'>Senha</label>
+								<input id='senha' class='form-control' type='password' name='senhaCad' value='$password>
+						</div>
+						
+						<div id='endereco' class='col-md-12 form-group'>
+							<label for='endereco'>Endereço</label>
+								<input id='endereco' class='form-control' type='text' name='nomeCad' value='$endereco'>
+						</div>
+						
+
+						<div id='foto' class='col-md-12 form-group'>
+							<label for='foto'>Foto</label>
+								<input id='foto' class='form-control' type='text' name='nomeCad' value='$foto'>
+						</div>
 							
-							<div class='row'>
-								<div class='col-md-3 form-group'>
-									<button id='registerBTN' type='submit' class='btn btn-primary'  name='editConta'>Submit <i class='fa fa-send'></i></button>
-								</div>		
-							</div>
-                        </form>";
+						<div id='aniversario' class='col-md-12 form-group'>
+							<label for='aniversario'>Aniversario</label>
+								<input id='aniversario' class='form-control' type='text' name='nomeCad' value='$aniversario'>
+						</div>
+						
+						<div id='email' class='col-md-12 form-group'>
+							<label for='email'>Email</label>
+								<input id='email' class='form-control' type='email' name='nomeCad' value='$email'>
+						</div>
+						
+						<div id='telefone' class='col-md-12 form-group'>
+							<label for='telefone'>Telefone</label>
+								<input id='telefone' class='form-control' type='tel' name='nomeCad' value='$telefone'>
+						</div>
+						
+
+						<div id='github' class='col-md-12 form-group'>
+							<label for='github'>Github</label>
+								<input id='github' class='form-control' type='text' name='nomeCad' value='$github'>
+						</div>
+						
+						<div id='genero' class='col-md-12 form-group'>
+							<label for='genero'>Genero</label>
+								<input id='genero' class='form-control' type='text' name='nomeCad' value='$genero'>
+						</div>
+						
+						<div class='col-md-3 form-group'>
+							<button id='registerBTN' type='submit' class='btn btn-primary'  name='editConta'>Submit <i class='fa fa-send'></i></button>
+						</div>		
+						
+						
+						</div>
+							
+						</form>";
                         ?>
 
 					</div>
