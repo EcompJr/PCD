@@ -69,10 +69,10 @@
 		}
 
 		//Funcao que atualiza informacoes da conta
-		public function editarConta($id, $login, $codedSenha, $nome, $cargo, $privilegio, $endereco, $foto, $email, $aniversario, $github, $genero, $telefone){
+		public function editarConta($id, $login, $codedSenha, $nome, $cargo, $privilegio, $endereco, $foto, $email, $aniversario, $rg, $cpf, $telefone){
 
 			$conn = Connection::getInstance();
-			$query = "UPDATE usuarios SET login=\"$login\", password=\"$codedSenha\", name=\"$nome\", occupation=\"$cargo\", privilege=\"$privilegio\", address=\"$endereco\", photo=\"$foto\", email=\"$email\", birthday=\"$aniversario\", github=\"$github\", gender=\"$genero\" , phone=\"$telefone\" WHERE id=\"$id\";";
+			$query = "UPDATE usuarios SET login=\"$login\", password=\"$codedSenha\", name=\"$nome\", occupation=\"$cargo\", privilege=\"$privilegio\", address=\"$endereco\", photo=\"$foto\", email=\"$email\", birthday=\"$aniversario\", RG=\"$rg\", CPF=\"$cpf\" , phone=\"$telefone\" WHERE id=\"$id\";";
 			$sql = $conn->query($query);
 			
 			return $sql;
@@ -89,10 +89,16 @@
 		}
 
 		//Funcao que atualiza informacoes da conta
-		public function resetSenhas($codedSenha){
+		public function reset($operation, $defaultValue){
 
 			$conn = Connection::getInstance();
-			$query = "UPDATE usuarios SET password=\"$codedSenha\";";
+			if($operarion == 1){
+				$query = "UPDATE usuarios SET password=\"$defaultValue\";";
+			}else if($operation == 2){
+				$query = "UPDATE usuarios SET score=\"$defaultValue\";";
+			}else{
+				return false;
+			}
 			$sql = $conn->query($query);
 			
 			return $sql;

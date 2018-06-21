@@ -74,8 +74,9 @@
                     <button type="submit" class="btn btn-primary" name="loginAttempt" id="loginAttempt" >Entrar</button>
                     
                     <!-- Caso o DB tenha algum bug relacionado as senhas novamente, faça o reset de todas com esse botão-->   
-                    <!--<button type="submit" class="btn btn-primary" name="resetAttempt" id="resetAttempt" >Reset</button>-->
-                
+                    <!--<button type="submit" class="btn btn-primary" name="resetAttempt" id="resetAttempt" >ResetSenhas</button>
+                    <button type="submit" class="btn btn-primary" name="resetAttempt2" id="resetAttempt2" >ResetPontos</button>-->
+
                 </form>
             </div>
         </div>

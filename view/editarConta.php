@@ -57,10 +57,10 @@
                             $name = $conta['0']['name'];
                             $occupation = $conta['0']['occupation'];
 							$endereco = $conta['0']['address'];
-							$genero = $conta['0']['gender'];
+							$cpf = $conta['0']['CPF'];
 							$email = $conta['0']['email'];
 							$telefone = $conta['0']['phone'];
-							$github = $conta['0']['github'];
+							$rg = $conta['0']['RG'];
 							$aniversario = $conta['0']['birthday'];
 							$foto = $conta['0']['photo'];
 
@@ -128,14 +128,14 @@
 						</div>
 						
 
-						<div id='github' class='col-md-12 form-group'>
-							<label for='github'>Github</label>
-								<input id='github' class='form-control' type='text' name='githubCad' value='$github'>
+						<div id='rg' class='col-md-12 form-group'>
+							<label for='rg'>RG</label>
+								<input id='rg' class='form-control' type='text' name='rgCad' value='$rg'>
 						</div>
 						
-						<div id='genero' class='col-md-12 form-group'>
-							<label for='genero'>Genero</label>
-								<input id='genero' class='form-control' type='text' name='generoCad' value='$genero'>
+						<div id='cpf' class='col-md-12 form-group'>
+							<label for='cpf'>CPF</label>
+								<input id='cpf' class='form-control' type='text' name='cpfCad' value='$cpf'>
 						</div>
 						
 						<div class='col-md-3 form-group'>

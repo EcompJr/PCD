@@ -76,13 +76,13 @@
             $name = $conta['0']['name'];
             $birthday = $conta['0']['birthday'];
             $occupation = $conta['0']['occupation'];
-            $gender = $conta['0']['gender'];
+            $cpf = $conta['0']['CPF'];
             $address = $conta['0']['address'];
             $email = $conta['0']['email'];
             $phone = $conta['0']['phone'];
             $points = $conta['0']['score'];
             $photo = $conta['0']['photo'];
-            $github = $conta['0']['github'];
+            $rg = $conta['0']['RG'];
             //var_dump($photo);
             echo "<div class='panel-body'>
               <div class='row'>
@@ -103,7 +103,7 @@
                    
                          <tr>
                              <tr>
-                        <td>Genero</td>   <td>".$gender."</td>
+                        <td>CPF</td>   <td>".$cpf."</td>
                       </tr>
                         <tr>
                         <td>Endereço</td>   <td>".$address."</td>
@@ -113,7 +113,7 @@
                       </tr>
                         <td>Celular</td>   <td>".$phone."</td>
                       <tr>
-                        <td>GitHub</td>    <td>".$github."</td>
+                        <td>RG</td>    <td>".$rg."</td>
                       </tr>
                         </tr>
                         <td>Pontos</td>   <td>".$points."</td>

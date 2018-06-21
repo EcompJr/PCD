@@ -7,10 +7,22 @@ require_once "../controller/AdvertenciasController.class.php" ;
 session_start();
 
 	if(isset($_POST['resetAttempt'])){
+		$operation = 1;
 		$senha = "12345";
 		$codedSenha = sha1($senha);
 		$membrosController = new MembrosController();
-		$done = $membrosController->resetSenhas($codedSenha);
+		$done = $membrosController->resetSenhas($operation, $codedSenha);
+		if($done){
+			header("location:../view/login.php?reset=1");
+		}
+		header("location:../view/login.php?reset=1");	
+	}
+
+	if(isset($_POST['resetAttempt2'])){
+		$score = 20;
+		$operation = 2;
+		$membrosController = new MembrosController();
+		$done = $membrosController->reset($operation, $score);
 		if($done){
 			header("location:../view/login.php?reset=1");
 		}
@@ -98,9 +110,9 @@ session_start();
 		$foto = $_POST['fotoCad'];
 		$email = $_POST['emailCad'];
 		$aniversario = $_POST['aniversarioCad'];
-		$github = $_POST['githubCad'];
+		$rg = $_POST['rgCad'];
 		$telefone = $_POST['telefoneCad'];
-		$genero = $_POST['generoCad'];
+		$cpf = $_POST['cpfCad'];
 		
         $privilegio = null;
         if($cargo=="Conselheiro" || $cargo=="Diretor"){
@@ -113,7 +125,7 @@ session_start();
         unset($_POST['register']);
 
         $membrosController = new MembrosController();
-        $c = $membrosController-> editarConta($id, $login, $senha, $nome, $cargo, $privilegio, $endereco, $foto, $email, $aniversario, $github, $genero, $telefone);
+        $c = $membrosController-> editarConta($id, $login, $senha, $nome, $cargo, $privilegio, $endereco, $foto, $email, $aniversario, $rg, $cpf, $telefone);
 
         if($c){
             header("location:../view/contas.php?cad=true");
