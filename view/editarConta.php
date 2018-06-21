@@ -80,7 +80,7 @@
 						<div class='col-md-12 form-group' id='cargo'>
 							<label for='idMotivo'>Cargo</label>
 								<select required id='selectCargo' class='form-control' name='selectCargo'>
-									<option value='' disabled selected>".$occupation."</option>	
+									<option value='".$occupation."' selected>".$occupation."</option>	
 									<option value='Conselheiro'>Conselheiro</option>
 									<option value='Diretor'>Diretor</option>
 									<option value='Membro'>Membro</option>
@@ -103,39 +103,39 @@
 						
 						<div id='endereco' class='col-md-12 form-group'>
 							<label for='endereco'>Endereço</label>
-								<input id='endereco' class='form-control' type='text' name='nomeCad' value='$endereco'>
+								<input id='endereco' class='form-control' type='text' name='enderecoCad' value='$endereco'>
 						</div>
 						
 
 						<div id='foto' class='col-md-12 form-group'>
 							<label for='foto'>Foto</label>
-								<input id='foto' class='form-control' type='text' name='nomeCad' value='$foto'>
+								<input id='foto' class='form-control' type='text' name='fotoCad' value='$foto'>
 						</div>
 							
 						<div id='aniversario' class='col-md-12 form-group'>
 							<label for='aniversario'>Aniversario</label>
-								<input id='aniversario' class='form-control' type='text' name='nomeCad' value='$aniversario'>
+								<input id='aniversario' class='form-control' type='text' name='aniversarioCad' value='$aniversario'>
 						</div>
 						
 						<div id='email' class='col-md-12 form-group'>
 							<label for='email'>Email</label>
-								<input id='email' class='form-control' type='email' name='nomeCad' value='$email'>
+								<input id='email' class='form-control' type='email' name='emailCad' value='$email'>
 						</div>
 						
 						<div id='telefone' class='col-md-12 form-group'>
 							<label for='telefone'>Telefone</label>
-								<input id='telefone' class='form-control' type='tel' name='nomeCad' value='$telefone'>
+								<input id='telefone' class='form-control' type='tel' name='telefoneCad' value='$telefone'>
 						</div>
 						
 
 						<div id='github' class='col-md-12 form-group'>
 							<label for='github'>Github</label>
-								<input id='github' class='form-control' type='text' name='nomeCad' value='$github'>
+								<input id='github' class='form-control' type='text' name='githubCad' value='$github'>
 						</div>
 						
 						<div id='genero' class='col-md-12 form-group'>
 							<label for='genero'>Genero</label>
-								<input id='genero' class='form-control' type='text' name='nomeCad' value='$genero'>
+								<input id='genero' class='form-control' type='text' name='generoCad' value='$genero'>
 						</div>
 						
 						<div class='col-md-3 form-group'>

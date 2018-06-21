@@ -69,10 +69,10 @@
 		}
 
 		//Funcao que atualiza informacoes da conta
-		public function editarConta($id, $login, $codedSenha, $nome, $cargo, $privilegio){
+		public function editarConta($id, $login, $codedSenha, $nome, $cargo, $privilegio, $endereco, $foto, $email, $aniversario, $github, $genero, $telefone){
 
 			$conn = Connection::getInstance();
-			$query = "UPDATE usuarios SET login=\"$login\", password=\"$codedSenha\", name=\"$nome\", occupation=\"$cargo\", privilege=\"$privilegio\" WHERE id=\"$id\";";
+			$query = "UPDATE usuarios SET login=\"$login\", password=\"$codedSenha\", name=\"$nome\", occupation=\"$cargo\", privilege=\"$privilegio\", address=\"$endereco\", photo=\"$foto\", email=\"$email\", birthday=\"$aniversario\", github=\"$github\", gender=\"$genero\" , phone=\"$telefone\" WHERE id=\"$id\";";
 			$sql = $conn->query($query);
 			
 			return $sql;

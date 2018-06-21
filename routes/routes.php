@@ -94,7 +94,14 @@ session_start();
         $nome = $_POST['nomeCad'];
 		$cargo = $_POST['selectCargo'];
 		$id = $_POST['Id'];
-        
+		$endereco = $_POST['enderecoCad'];
+		$foto = $_POST['fotoCad'];
+		$email = $_POST['emailCad'];
+		$aniversario = $_POST['aniversarioCad'];
+		$github = $_POST['githubCad'];
+		$telefone = $_POST['telefoneCad'];
+		$genero = $_POST['generoCad'];
+		
         $privilegio = null;
         if($cargo=="Conselheiro" || $cargo=="Diretor"){
             $privilegio = '1';
@@ -106,7 +113,8 @@ session_start();
         unset($_POST['register']);
 
         $membrosController = new MembrosController();
-        $c = $membrosController->editarConta($id, $login, $codedSenha, $nome, $cargo, $privilegio);
+        $c = $membrosController-> editarConta($id, $login, $senha, $nome, $cargo, $privilegio, $endereco, $foto, $email, $aniversario, $github, $genero, $telefone);
+
         if($c){
             header("location:../view/contas.php?cad=true");
         }else{
