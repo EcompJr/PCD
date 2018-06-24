@@ -78,6 +78,16 @@
 			return $sql;
 		}
 
+		//Funcao que atualiza informacoes da conta
+		public function updateScore($newScore, $id){
+
+			$conn = Connection::getInstance();
+			$query = "UPDATE usuarios SET score=\"$newScore\" WHERE id=\"$id\";";
+			$sql = $conn->query($query);
+			
+			return $sql;
+		}
+
 		//Funcao que deleta a conta
 		public function deletarConta($id){
 

@@ -206,9 +206,11 @@ session_start();
 		$add = $advController->addAdvertenciaDB($motivo, $data, $pontos, $responsavel, $indeferida, $membroId, $membro);
 		
 		if($add){
-			header("location:../view/painel.php?add=true");
+			$newScore = $conta[0]['score'] - $pontos;
+			$membrosController->updateScore($newScore, $membroId);
+			header("location:../view/advertencias.php?add=true");
 		}else{
-			header("location:../view/painel.php?add=false");
+			header("location:../view/advertencias.php?add=false");
 		}
 
 	}
