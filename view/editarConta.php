@@ -98,7 +98,7 @@
 
 						<div id='senha' class='col-md-12 form-group'>
 							<label for='senha'>Senha</label>
-								<input id='senha' class='form-control' type='password' name='senhaCad' value='$password>
+								<input id='senha' class='form-control' type='password' name='senhaCad' value='$password'>
 						</div>
 						
 						<div id='endereco' class='col-md-12 form-group'>

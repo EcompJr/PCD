@@ -15,20 +15,6 @@
                     <li>
                         <a class="page-scroll scrollSuave" href="pcd.php">Membros</a>
                     </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle page-scroll scrollSuave" data-toggle="dropdown" href="#">Gerenciar
-                        <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="advertencias.php">Advertências</a>
-                            </li>
-                            <li>
-                                <a href="contas.php">Contas</a>
-                            </li>
-                        </ul>
-                    </li>
-
 
                     <li class="dropdown">
                         <a class="dropdown-toggle page-scroll scrollSuave" data-toggle="dropdown" href="#">Sistema
@@ -43,7 +29,6 @@
                             </li>
                         </ul>
                     </li>
-
                     <?php if(isset($_SESSION['auth'])){echo '<li><button id="logout" class="btn btn-default navbar-btn page-scroll">Logout</button></li>';}?>
                     
                 </ul>
@@ -53,4 +38,3 @@
     </div>
 <!-- /.container-fluid -->
 </nav>
-

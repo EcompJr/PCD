@@ -11,7 +11,7 @@ session_start();
 		$senha = "12345";
 		$codedSenha = sha1($senha);
 		$membrosController = new MembrosController();
-		$done = $membrosController->resetSenhas($operation, $codedSenha);
+		$done = $membrosController->reset($operation, $codedSenha);
 		if($done){
 			header("location:../view/login.php?reset=1");
 		}
@@ -178,9 +178,20 @@ session_start();
 		$indeferida = $_POST['idIndef'];
 
         $advsController = new AdvertenciasController();
-        $a = $advsController->editarAdvertencia($membro, $motivo, $data, $pontos, $responsavel, $indeferida, $idAdv);
+		
+		$advAntiga = $advsController->searchForWarning($idIdv);
+		$qtdAnterior = $advAntiga[0]['points'];
+		
+		$a = $advsController->editarAdvertencia($membro, $motivo, $data, $pontos, $responsavel, $indeferida, $idAdv);
         if($a){
-            header("location:../view/advertencias.php?cad=true");
+			$membrosController = new MembrosController();
+			$conta = $membrosController->getContaById($membroId);
+
+			$newScore = ($conta[0]['score'] + $qtdAnterior) - $pontos;
+			
+			$membrosController->updateScore($newScore, $membroId);
+			
+			header("location:../view/advertencias.php?cad=true");
         }else{
             header("location:../view/advertencias.php?cad=false");
         }
