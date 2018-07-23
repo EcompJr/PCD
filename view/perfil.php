@@ -37,10 +37,12 @@
 </head>
 <body>
 	<?php
+    $id = $_GET['id'];
+    $conta = MembrosController::getContaById($id);
     $adm = $conta['0']['privilege'];
-    if($adm == 1){        
+    if($adm == "1"){        
       require_once 'navbarAdm.php';
-    }else if($adm == 0){
+    }else if($adm == "0"){
       require_once 'navbar.php';
     }
     require_once '../controller/MembrosController.class.php';

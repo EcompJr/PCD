@@ -48,7 +48,7 @@ session_start();
 
 			//coloquei pra checar se o usuario tem a palavra "Diretor no campo "occupation" do banco.
 			if (preg_match('/\Diretor\b/',$user['occupation'] )) {
-				header("location:../view/painel.php");			
+				header("location:../view/perfil.php?id=".$user['id']);			
 			}else if (preg_match('/\Conselheiro\b/',$user['occupation'] )){
 				header("location:../view/perfil.php?id=".$user['id']);
 			}else{
@@ -170,31 +170,41 @@ session_start();
 	if (isset($_POST['editAdvertence'])) {
 		
 		$idAdv = $_POST['idAdv'];
-		$motivo = $_POST['motivo'];
-        $qtdDias= $_POST['qtdDias'];
-        $pontos = $_POST['points'];
-		$membro = $_POST['membro'];
-		$responsavel = $_POST['resp'];
-		$indeferida = $_POST['idIndef'];
+		$motivo = $_POST['selectMotivo'];
+        //$qtdDias= $_POST['qtdDias'];
+		$data = $_POST['dataAdv'];
+		$qtdAtualDePontos = $_POST['pontos'];
+		$penalizado = $_POST['penalizado'];
+		$responsavel = $_POST['responsavel'];
+		$indeferida = $_POST['indeferida'];
 
         $advsController = new AdvertenciasController();
 		
-		$advAntiga = $advsController->searchForWarning($idIdv);
-		$qtdAnterior = $advAntiga[0]['points'];
+		$adv = $advsController->searchForWarning($idIdv);
+		$qtdAnteriorDePontos = $adv[0]['points'];
+		$membroId = $adv[0]["memberId"];
 		
-		$a = $advsController->editarAdvertencia($membro, $motivo, $data, $pontos, $responsavel, $indeferida, $idAdv);
-        if($a){
-			$membrosController = new MembrosController();
+		/*var_dump($idAdv);
+		var_dump($motivo);
+		var_dump($data);
+		var_dump($pontos);
+		var_dump($penalizado);
+		var_dump($responsavel);
+		var_dump($indeferida);
+		*/
+		
+		$membrosController = new MembrosController();
+		$a = $advsController->editarAdvertencia($penalizado, $motivo, $data, $pontos, $responsavel, $indeferida, $idAdv, $membroId);
+		if($a == TRUE){
 			$conta = $membrosController->getContaById($membroId);
-
-			$newScore = ($conta[0]['score'] + $qtdAnterior) - $pontos;
-			
+			$newScore = ($conta[0]['score'] + $qtdAnteriorDePontos) - $qtdAtualDePontos;
 			$membrosController->updateScore($newScore, $membroId);
+			header("location:../view/advertencias.php?edit=true");
+		}else{
+			header("location:../view/advertencias.php?edit=false");
+		}
+		
 			
-			header("location:../view/advertencias.php?cad=true");
-        }else{
-            header("location:../view/advertencias.php?cad=false");
-        }
 	}
 
     //Adicionar advertencia
@@ -228,13 +238,28 @@ session_start();
 
 	//Delete ADV
 	if(isset($_GET['delAdv'])){
+		$idAdv = $_GET['delAdv'];
 		
 		$advController = new AdvertenciasController();
-
+		$adv = $advController->searchForWarning($idAdv);
+		
+		$points = $adv[0]['points'];
+		$membroId = $adv[0]["memberId"];
+		
+		$membrosController = new MembrosController();
 		$del = $advController->deletarAdvertencia($_GET['delAdv']);	
 		//nao funcionou a verificacao, mas a funcao sim
+		
+		//esse método n está sendo usando, pq tem uma rotina em javascript sobrescrevendo ela em advetencias.js
 		if($del > '0'){
-			header("location:../view/advertencias.php?delete=true");
+			$conta = $membrosController->getContaById($membroId);
+			$newScore = $conta[0]['score'] + $points;
+			$b = $membrosController->updateScore($newScore, $membroId);
+			if($b)
+				header("location:../view/advertencias.php?delete=true");
+			else{
+				var_dump($b);
+			}
 		}else{
 			header("location:../view/advertencias.php?delete=false");
 		}

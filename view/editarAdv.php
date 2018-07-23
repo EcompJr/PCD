@@ -39,7 +39,7 @@
 		require_once 'navbarAdm.php';
 	?>
 	<div class="container-fluid">
-		<div class="row">
+		<div class="row"
 			<div id="divConteudo" class="container col-md-offset-1 col-md-10">
 				<h4 class="text-justify">Adicionar advertências</h4>
 				<div class="container-fluid">
@@ -47,19 +47,25 @@
 						<div class="col-md-12">
 							
                         <?php
-                            $idAdv = $_GET['editAdv'];
+							$idAdv = $_GET['editAdv'];
+							
                             $adv = AdvertenciasController::SearchForWarning($idAdv);
+							
 							$reason = $adv['reason'];
 							$data = $adv['data'];
-                            //echo $key;
+							$responsible = $adv['responsible'];
+							$memberId = $adv['memberId'];
+							$memberName = $adv['member'];
+							$points = $adv['points'];
+							$dismissed = $adv['dismissed'];
+							$qtdDays = $adv['qtdDays'];
                            
                             echo "<form id='advert' action='../routes/routes.php' method='POST' name='formAdv'>
 								
 							
 							<div class='row'>
 							<div class='col-md-12 form-group'>
-								<input id='IdAdv' class='form-control' type='hidden' name='idAdv' value='$idAdv'>
-							</div>
+								<input id='IdAdv' class='form-control' type='hidden' name='idAdv' value='$idAdv'>							</div>
 							</div>
 
 								<div class='row'>
@@ -82,9 +88,15 @@
 
 								<div class='row'>
 									<div class='col-md-12 form-group'>
-										<input id='qtdDias' class='form-control' type='number' name='qtdDias' title='Disponível apenas para o 3º motivo.' placeholder='Quantidade de dias' min='1' size='2'>
-									</div>
+									<label>Quantidade de Dias</label>";
+									if($qtdDays == null)
+										echo "<input id='qtdDias' class='form-control' type='number' name='qtdDias' title='Disponível apenas para o 3º motivo.' placeholder='Quantidade de dias' min='1' size='2'>";
+									else
+										echo "<input id='qtdDias' class='form-control' type='number' name='qtdDias' title='Disponível apenas para o 3º motivo.' placeholder='Quantidade de dias' value='".$qtdDays."' min='1' size='2'>";
+									
+									echo "</div>
 								</div>
+
 								<div class='row'>
 									<div class='col-md-6 form-group'>
 										<label for='inpDate'>Data
@@ -96,39 +108,52 @@
 										</div>
 										</label>
 									</div>
-									<div id='pont' class='col-md-6 form-group'>
+									<div id='pontos' class='col-md-6 form-group'>
 										<label>Pontos</label>
 										<br>
-										<input id='points' class='form-control' type='' name='pontos' title='Preenchido com base no motivo escolhido.' readonly='readonly' value=' '>
+										<input id='pontos' class='form-control' type='' name='pontos' title='Preenchido com base no motivo escolhido.' readonly='readonly' value='".$points."'>
 									</div>
-								</div>
+								</div>";
 
-								<div class='row'>		
+								/*<div class='row'>		
 									<div id='membro' class='col-md-12 form-group'>
-									<label for='membro'>Penalizado</label>
-										<select required id='selectMembros' class='form-control' type='text' name='selectPenalizado'>
+									<label for='selectMembro'>Penalizado</label>
+										<select required id='selectMembro' class='form-control' type='text' name='selectMembro' >
 												<!-- Preenchido por js  -->
 										</select>
 									</div>
-								</div>
+								</div>-->*/
+
+								echo "<div class='row'>		
+										<div id='penalizado' class='col-md-12 form-group'>
+											<label for='penalizado'>Penalizado</label>
+												<input type = 'text' required id='penalizado' class='form-control' name='penalizado' value='".$memberName."' readonly>
+										</div>
+									</div>
+
 								<div class='row'>
                                     <div class='col-md-12 form-group'>
-									<label for='resp'>Responsável</label>
-										<input id='resp' class='form-control' type='text' name='responsavel' title='Preenchido com base no banco de dados.' readonly='readonly' value=''>
+									<label for='responsavel'>Responsável</label>
+										<input id='responsavel' class='form-control' type='text' name='responsavel' title='Preenchido com base no banco de dados.' readonly='readonly' value='".$responsible."'>
 										
 									</div>
-								</div>
-								<div class='row'>
+								</div>";
+								
+
+								echo "<div class='row'>
 									<div class='col-md-2 form-group'>
-										<label>Indeferida</label>
-										<select id='idIndef' required class='form-control' name='selectIndef'>
-											<option value='' disabled selected>Escolha abaixo</option>	
+										<label for = 'indeferida'>Indeferida</label>
+										<select id='indeferida' required class='form-control' name='indeferida'>	
 											<option value='0'>Não</option>
 											<option value='1'>Sim</option>
 										</select>
-										
 									</div>
+								</div>";
+											
+										
+									echo "</div>
 								</div>
+
 								<div class='row'>
 									<div class='col-md-3 form-group'>
 										<button id='envAdv' type='submit' class='btn btn-primary'  name='editAdvertence'>Submit <i class='fa fa-send'></i></button>

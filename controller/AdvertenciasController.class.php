@@ -53,10 +53,10 @@
 		}
 
 		//Funcao que atualiza informacoes da conta
-		public function editarAdvertencia($member, $motivo, $data, $pontos, $responsavel, $indeferida, $advId){
+		public function editarAdvertencia($member, $motivo, $data, $pontos, $responsavel, $indeferida, $advId, $memberId){
 
 			$conn = Connection::getInstance();
-			$query = "UPDATE advertences SET reason=\"$motivo\", data=\"$data\", points=\"$pontos\", responsible=\"$responsavel\", dismissed=\"$indeferida\", member=\"$member\" WHERE id=\"$advId\";";
+			$query = "UPDATE advertences SET reason=\"$motivo\", data=\"$data\", points=\"$pontos\", responsible=\"$responsavel\", dismissed=\"$indeferida\", member=\"$member\", memberId=\"$memberId\" WHERE id=\"$advId\";";
 			$sql = $conn->query($query);
 			
 			return $sql;
