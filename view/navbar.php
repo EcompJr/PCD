@@ -25,7 +25,7 @@
                                 <a href="perfil.php">PCD</a>
                             </li>
                             <li>
-                                <a href="pfc.php">PFC</a>
+                                <a href="../PFC/pfc/index.php">PFC</a>
                             </li>
                         </ul>
                     </li>

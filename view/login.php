@@ -72,9 +72,10 @@
                     </div>
                     
                     <button type="submit" class="btn btn-primary" name="loginAttempt" id="loginAttempt" >Entrar</button>
-                    
+                    <a href="../index.php" class="btn btn-primary">Retornar</a>
+
                     <!-- Caso o DB tenha algum bug relacionado as senhas novamente, faça o reset de todas com esse botão-->   
-                    <button type="submit" class="btn btn-primary" name="resetAttempt" id="resetAttempt" >ResetSenhas</button>
+                    <!--<button type="submit" class="btn btn-primary" name="resetAttempt" id="resetAttempt" >ResetSenhas</button>
                     <button type="submit" class="btn btn-primary" name="resetAttempt2" id="resetAttempt2" >ResetPontos</button>-->
 
                 </form>

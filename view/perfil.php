@@ -53,8 +53,8 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div id="divConteudo" class="container col-md-offset-1 col-md-10">
-				<h4 class="text-justify">Meu Perfil</h4>
-				<div class="container-fluid">
+        <h4 class="text-justify">Meu Perfil</h4>
+			  <div class="container-fluid">
 					<div class="row">
 						<div class="col-md-12">
             <div class="container">
@@ -130,7 +130,6 @@
                     </tbody>
                   </table>
                   
-                  <a href='#' class='btn btn-primary'>Meus Projetos</a>
                   <a href='minhasAdvertencias.php?id=".$id."' class='btn btn-primary'>Minhas Advertências</a>
                 </div>
               </div>
