@@ -109,7 +109,7 @@
         </div>
     </header>
 
-    <!-- Members set -->
+    <!-- Members set 
     <div id='AH'>
         <div class="col-lg-12">
             <h2 class="page-header"></h2>
@@ -129,14 +129,14 @@
                 ?> 
             </div>
         </div>
-                <!-- End Member -->                
+        End Member -->                
     <!-- End members set -->
     
 
     <!-- Members set -->
     <div id='IN'>
         <div class="col-lg-12">
-            <h2 class="page-header">I-N</h2>
+            <h2 class="page-header"></h2>
         </div>
 
         <div class="container">
