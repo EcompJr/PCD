@@ -69,32 +69,29 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `login`, `password`, `name`, `occupation`, `score`, `history`, `privilege`) VALUES
+(1, 'johnnysanttana', '', 'Johnny Santtana', 'Membro Consultor', 8, '', 0),
+(2, 'arianapereira', '', 'Ariana Pereira', 'Gerente de Redes Sociais', 0, '', 0),
+(3, 'emanuelsantana', '', 'Emanuel Santana', 'Membro Consultor', 0, '', 0),
+(4, 'carlostinin', '', 'Carlos Tinin', 'Membro Consultor', 0, '', 0),
 (5, 'pedrogomes', '8cb2237d0679ca88db6464eac60da96345513964', 'Pedro Gomes', 'Membro Consultor', 19, 'Trainee', 0),
-(6, 'kayocosta', '8cb2237d0679ca88db6464eac60da96345513964', 'Kayo Costa', 'Conselheiro', 19, '', 1),
+(6, 'gabrielazevedo', '', 'Gabriel Azevedo', '', 0, '', 0),
+(7, 'marcoantonio', '', 'Marcos Antonio', 'Acessos de RH', 0, '', 0),
 (8, 'ssscassio', '8cb2237d0679ca88db6464eac60da96345513964', 'Cássio Santos', 'Conselheiro', 16, '', 1),
-(9, 'alissonvilas', '8cb2237d0679ca88db6464eac60da96345513964', 'Alisson Vilas', 'Membro Consultor', 18, '', 1),
+(9, 'taisonmachado', '', 'Taíson Machado', 'Membro Consultor', 0, '', 0),
+(10, 'vanessasouza', '', 'Vanessa Souza', 'Membro Consultor', 0, '', 0),
+(11, 'victorsouza', '', 'Victor Souza', 'Membro Consultor', 0, '', 0),
+(12, 'elvishuges', '', 'Elvis Huges', 'Membro Consultor', 0, '', 0),
 (13, 'saulodetarso', '8cb2237d0679ca88db6464eac60da96345513964\r\n', 'Saulo De Tarso', 'Diretor Presidente', 10, '', 1),
-(14, 'thatiannecristiana', '8cb2237d0679ca88db6464eac60da96345513964\r\n', 'Thatianne Cristina', 'Membro Consultor', 19, '', 0),
+(14, 'rafaelbrito', '', 'Rafael Brito', 'Membro Consultor', 0, '', 0),
 (15, 'lucascardoso', '8cb2237d0679ca88db6464eac60da96345513964\r\n', 'Lucas Cardoso', 'Consultor', 17, '', 0),
-(19, 'luanvictor', '8cb2237d0679ca88db6464eac60da96345513964\r\n', 'Luan Victor', 'Membro Consultor', 18, '', 0),
+(16, 'khaickbrito', '', 'Khaíck', 'Gerente de Vendas e Prosprecção Ativa', 0, '', 0),
 (21, 'brunovogel', '8cb2237d0679ca88db6464eac60da96345513964\r\n', 'Bruno Vogel', 'Vice-Presidente', 11, '', 0),
 (22, 'pedrobrandao', '8cb2237d0679ca88db6464eac60da96345513964\r\n', 'Pedro Brandão', 'Membro Consultor', 19, '', 1),
 (26, 'valmiralmeida', '8cb2237d0679ca88db6464eac60da96345513964', 'Valmir Vinícius', 'Diretor de Projetos', 17, '', 0),
 (27, 'gustavoboanerges', '8cb2237d0679ca88db6464eac60da96345513964\r\n', 'Gustavo Boanerges', 'Membro Consultor', 19, '', 0),
 (28, 'aloisiojunior', '8cb2237d0679ca88db6464eac60da96345513964\r\n', 'Aloísio Júnior', 'Diretor de Administrativo e Financeiro', 14, '', 0),
 (30, 'karollima', '8cb2237d0679ca88db6464eac60da96345513964\r\n', 'Karol Lima', 'Membro Consultor', 17, '', 0),
-(33, 'douglascerqueira', '8cb2237d0679ca88db6464eac60da9634551', 'Douglas Cerqueira', 'Membro Consultor', 12, '', 0),
-(34, 'emillesampaio', '8cb2237d0679ca88db6464eac60da9634551', 'Emille Sampaio', 'Diretor de Recursos Humanos', 13, '', 0),
-(39, 'vvvv', '386c57017f4658ca5215569643f0189d', 'Vvvv', 'Conselheiro', 20, ' ', 1),
-(40, 'ggg', 'ba248c985ace94863880921d8900c53f', 'GGGG', 'Membro', 20, ' ', 0),
-(41, 'bbb', '08f8e0260c64418510cefb2b06eee5cd', 'BBB', 'Conselheiro', 20, ' ', 1),
-(42, 'fff', '343d9040a671c45832ee5381860e2996', 'FFF', 'Conselheiro', 20, ' ', 1),
-(43, 'iiii', '2210a2fca76bc0be329770c5b686d048', 'IIII', 'Trainee', 20, ' ', 0),
-(44, 'jjjj', '3b6281fa2ce2b6c20669490ef4b026a4', 'JJJJ', 'Diretor', 20, ' ', 1),
-(45, 'wwww', 'e34a8899ef6468b74f8a1048419ccc8b', 'Wwww', 'Conselheiro', 20, ' ', 1),
-(46, 'xxx', 'ea416ed0759d46a8de58f63a59077499', 'Xxxx', 'Membro', 20, ' ', 0),
-(47, 'ssss', '8f60c8102d29fcd525162d02eed4566b', 'Ssss', 'Membro', 20, ' ', 0),
-(48, 'oooo', 'ce7ce9108ae218e4ee612b0b36e3ed1d', 'Oooo', 'Conselheiro', 20, ' ', 1);
+(34, 'emillesampaio', '8cb2237d0679ca88db6464eac60da9634551', 'Emille Sampaio', 'Diretor de Recursos Humanos', 13, '', 0);
 
 --
 -- Índices de tabelas apagadas
