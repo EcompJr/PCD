@@ -1,13 +1,11 @@
 <?php
     
-    $ds = DIRECTORY_SEPARATOR;
-	$pasta = explode($ds,getcwd());
-	$pasta = end($pasta);
+	$pasta = "PCD/pfc";
 
 	header("Content-type: text/html; charset=utf-8");
 	define('DEBUG',true);
-    define('ABSOLUTE_PATH', dirname( __FILE__ )); //Absolute path
-
+	define('ABSOLUTE_PATH', dirname( __FILE__ )); //Absolute path
+	
 	
 	if(DEBUG === true){
 		define('URI_BASE',"http://".$_SERVER['SERVER_NAME']."/".$pasta."/index.php"); //Root URI
